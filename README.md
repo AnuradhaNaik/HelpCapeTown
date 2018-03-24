@@ -1,1 +1,1 @@
-"# HelpCapeTown" 
+An app to help the people of Cape town coordinate efforts to combat the water crisis
