@@ -131,11 +131,22 @@ section.action-bar {
 	display: inline-block; margin-left: 19px;text-align: left;
 }
 .action-bar small{
-font-size: medium;
+/*font-size: medium;*/
 }
 .floating-button.close{
 bottom: 90%;
     transform: rotate(43deg);
+}
+#add-div form input {
+    padding: 8px;
+    margin: 18px;
+    font-size: large;
+    width: 50%; outline: none;
+}
+
+#add-div form {
+    text-align: center;
+    /* width: 70%; */
 }
 @media screen and (min-device-width: 800px)
 {
@@ -174,11 +185,17 @@ bottom: 90%;
     height: 100%;
     z-index: 500;
     top: 0px;
-    display: none;
+    padding: 20px;text-align: center;
 " id="add-div">
+<h2 style="/* padding-top: 40px; */text-align: center;">Add to Feed</h2>
+<ul style="list-style: none;display: inline-block;">
+	<li style="cursor: pointer;">Update</li>
+	<li style="cursor: pointer;">Objective</li>
+	<li></li>
+</ul>
 <form>
-<input><br>
-    <input><br><input></form>
+<input placeholder="Title" ><br>
+    <input placeholder="Content (200 characters max)"></form>
 </div>
 
 <button style="
@@ -189,7 +206,7 @@ bottom: 90%;
     border: 1px solid;
     color:#258bde;
     cursor: pointer;
-    margin-left: 2%;
+    margin-left: 10px;
     outline: none;
     border-radius: 50%;
     padding: 11px;
@@ -222,7 +239,7 @@ bottom: 90%;
     border: 1px solid;
     color:#258bde;
     cursor: pointer;
-    margin-left: 11%;
+    margin-left: 90px;
     outline: none;
     border-radius: 50%;
     padding: 11px;
@@ -255,7 +272,7 @@ bottom: 90%;
     border: 1px solid;
     color:#258bde;
     cursor: pointer;
-    margin-left: 20.5%;
+    margin-left: 170px;
     outline: none;
     border-radius: 50%;
     padding: 11px;
@@ -280,9 +297,8 @@ bottom: 90%;
     display: none;
 ">20</span>
     </button>
-
 	<center>
-<header><h1>#HelpCapeTown</h1></header>
+<header><h1 style="padding-top: 40px">#HelpCapeTown</h1></header>
 <button class="floating-button">+</button>
 <div id="highlights"><button style="    float: right;
     padding: 7px;
