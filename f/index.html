@@ -141,12 +141,35 @@ bottom: 90%;
     padding: 8px;
     margin: 18px;
     font-size: large;
-    width: 50%; outline: none;
+    letter-spacing: 0.09em;
+    width: 70%;
+    outline: none;
+    font-family: 'Palanquin', sans-serif;
+    padding-top: 0px;
+    color: navy;
 }
 
 #add-div form {
-    text-align: center;
-    /* width: 70%; */
+      text-align: center;
+    
+    margin-top: 37px;
+}
+ul#add_items li {
+    margin: 9px;
+    margin-bottom: 29px;
+    cursor: pointer;
+    padding: 7px;
+    /* border: 1px solid gainsboro; */
+    border-top: none;
+    border-bottom: 2px solid  #18b7e8;
+}
+
+ul#add_items {
+    margin-bottom: 49px;
+    /* border: 1px solid lightgray; */
+    padding: 29px;
+    margin: 0px;
+    width: 30%;
 }
 @media screen and (min-device-width: 800px)
 {
@@ -188,14 +211,44 @@ bottom: 90%;
     padding: 20px;text-align: center;
 " id="add-div">
 <h2 style="/* padding-top: 40px; */text-align: center;">Add to Feed</h2>
-<ul style="list-style: none;display: inline-block;">
+<ul style="list-style: none;display: inline-block;" id="add_items">
 	<li style="cursor: pointer;">Update</li>
 	<li style="cursor: pointer;">Objective</li>
-	<li></li>
+	<li style="cursor: pointer;">Milestone</li>
+<li>Events</li>
+<li>Call On/Invite</li>
 </ul>
 <form>
-<input placeholder="Title" ><br>
-    <input placeholder="Content (200 characters max)"></form>
+<input placeholder="Title"><br>
+  
+  <div placeholder="Content (200 characters max)" style="
+    min-height: 90px;
+    border: 1px solid grey;
+    display: inline-block;
+    min-width: 70%;
+    text-align: left;
+    font-size: medium;
+    outline: none;
+    padding: 8px;
+    max-width: 70%;
+    line-height: 1.6;
+    font-family: 'Palanquin', sans-serif;
+    /* padding: 17px; */
+" contenteditable="true">cbb<br></div>
+<input type="submit" value="Go" style="
+    width: 26%;
+    background: transparent;
+    border: 1px solid navy;
+    cursor: pointer;
+    /* padding: 10px; */
+   
+    border-radius: 8px;
+    font-size: larger;
+    background: #2d61bd;
+    color: white;
+    margin: 40px;
+">
+  </form>
 </div>
 
 <button style="
