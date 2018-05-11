@@ -298,12 +298,12 @@
         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Add to Feed</h2>
         <center>
             <ul id="add_items">
-                <li>Update</li>
-                <li>Objective</li>
-                <li>Milestone</li>
-                <li>Event</li>
-                <li>Question</li>
-                <li>CTA</li>
+                <li onclick="addtofeed('u')">Update</li>
+                <li onclick="addtofeed('o')">Objective</li>
+                <li onclick="addtofeed('m')">Milestone</li>
+                <li onclick="addtofeed('e')">Event</li>
+                <li onclick="addtofeed('q')">Question</li>
+                <li onclick="addtofeed('c')">CTA</li>
             </ul>
         </center>
         <form style="display: none;">
@@ -366,6 +366,10 @@
     </div>
     <script type="text/javascript">
     var add_item = 0;
+            function addtofeed(a)
+            {
+                 $('#add_items').velocity("fadeOut", { duration: 400 });
+            }
     </script>
     <!-- End of Add Div -->
     <button class="barbutton" style="
@@ -426,17 +430,24 @@
     <center>
         <header>
             <h1 style="padding-top: 40px">#HelpCapeTown</h1></header>
-        <button id="addtofeed" class="floating-button" onclick="addtofeed()">+</button>
+        <button id="addtofeed" class="floating-button" onclick="addsomethingtofeed()">+</button>
         <script type="text/javascript">
         var open = 0;
 
-        function addtofeed() {
+        function addsomethingtofeed() {
             // body...
             if (open == 0) { $('#addtofeed').addClass('close');
                 $('#add-div').velocity("fadeIn", { duration: 200 });
                 open = 1; } else {
                 $('#addtofeed').removeClass('close');
-                $('#add-div').velocity("fadeOut", { duration: 400 });
+
+                $('#add-div').velocity("fadeOut",
+  { 
+    duration: 600,
+    complete: function() { 
+       $('#add_items').css('display','block');$('#add_items').css('opacity','1')
+    }
+  });
                 open = 0;
             }
         }
