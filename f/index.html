@@ -44,7 +44,7 @@ padding: 7px;
     border-radius: 7px;
     text-align: left;
     min-width: 85%;
-    margin-left: 3%;
+    margin-left: 3%;    min-height: 50px;
 }
 		#main-feed{
 			min-height: 390px;overflow: hidden;
@@ -135,7 +135,6 @@ section.action-bar {
 /*font-size: medium;*/
 }
 .floating-button.close{
-bottom: 90%;
     transform: rotate(43deg);
 }
 #add-div form input {
@@ -175,6 +174,46 @@ ul#add_items {
     width: 30%;
     list-style: none;
 }
+.barbutton{
+     float: left;
+    padding: 7px;
+    font-size: x-large;
+    background: transparent;
+    border:1px solid rgba(20, 71, 144, 0.78);
+    color: rgba(20, 71, 144, 0.78);
+    cursor: pointer;
+    margin-left: 10px;
+    outline: none;
+    border-radius: 50%;
+    padding: 13px;
+    margin-top: -6.5%;
+    background: white;
+    padding-left: 19px;
+    padding-right: 19px;
+    position: absolute;
+}
+.floating-button.close{
+       bottom:  calc(100% - 70px);
+}
+#searchbutton{
+      float: right;
+    padding: 7px;
+    font-size: x-large;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    margin-right: -2%;
+    outline: none;
+    border-radius: 50%;
+    padding: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+#searchbutton.activated
+{
+    background: white;color: turquoise;
+}
 @media screen and (min-device-width: 800px)
 {
 	body{
@@ -205,6 +244,10 @@ ul#add_items {
 	</style>
 </head>
 <body>
+
+<script src="js/jquery.js"></script>
+<script src="js/velocity.js"></script>
+
 <!-- Add something to feed -->
 
 <div style="
@@ -288,29 +331,17 @@ ul#add_items {
   </form>
 </div>
 
-
+<script type="text/javascript">
+    var add_item=0;
+    
+</script>
 
 
 <!-- End of Add Div -->
 
-<button style="
-  float: left;
-    padding: 7px;
-    font-size: x-large;
-    background: transparent;
-    border: 1px solid rgba(37, 139, 222, 0.44);
-    color: rgba(37, 139, 222, 0.55);
-    cursor: pointer;
-    margin-left: 10px;
-    outline: none;
-    border-radius: 50%;
-    padding: 13px;
-    margin-top: -6.5%;
-    background: white;
-    padding-left: 19px;
-    padding-right: 19px;
-    position: absolute;
-    "><span class="icon-person"></span>
+<button class="barbutton" style="
+ 
+    " onclick="location.href='person.html'"><span class="icon-person"></span>
    <span class="badge-main" style="
     font-size: small;
     background: orange;
@@ -326,24 +357,11 @@ ul#add_items {
 ">20</span>
     </button>
 
-    <button style="
-    float: left;
-    padding: 7px;
-    font-size: x-large;
-    background: transparent;
-       border: 1px solid rgba(37, 139, 222, 0.44);
-    color: rgba(37, 139, 222, 0.55);
-    cursor: pointer;
+    <button  class="barbutton" style="
+   
     margin-left: 104px;
-    outline: none;
-    border-radius: 50%;
-    padding: 13px;
-    margin-top: -6.5%;
-    background: white;
-    padding-left: 19px;
-    padding-right: 19px;
-    position: absolute;
-    "><span class="icon-notifications"></span>
+    
+    " onclick="location.href='notifications.html'"><span class="icon-notifications"></span>
     <span class="badge-main" style="
     font-size: small;
     background: orange;
@@ -358,23 +376,10 @@ ul#add_items {
     display: none;
 ">20</span>
 </button>
-<button style="
-  float: left;
-    padding: 7px;
-    font-size: x-large;
-    background: transparent;
-     border: 1px solid rgba(37, 139, 222, 0.44);
-    color: rgba(37, 139, 222, 0.55);
-    cursor: pointer;
+<button  class="barbutton" style="
+
     margin-left: 200px;
-    outline: none;
-    border-radius: 50%;
-    padding: 13px;
-    margin-top: -6.5%;
-    background: white;
-    padding-left: 19px;
-    padding-right: 19px;
-    position: absolute;
+    
     "><span class="icon-refresh"></span>
    <span class="badge-main" style="
     font-size: small;
@@ -392,25 +397,79 @@ ul#add_items {
     </button>
 	<center>
 <header><h1 style="padding-top: 40px">#HelpCapeTown</h1></header>
-<button class="floating-button">+</button>
-<div id="highlights"><button style="    float: right;
-    padding: 7px;
-    font-size: x-large;
+<button id="addtofeed" class="floating-button" onclick="addtofeed()">+</button>
+<script type="text/javascript">
+   var open=0;
+    function addtofeed() {
+        // body...
+            if(open==0){ $('#addtofeed').addClass('close'); $('#add-div').velocity("fadeIn", { duration: 200 }) ;open=1;}
+            else{
+                 $('#addtofeed').removeClass('close');$('#add-div').velocity("fadeOut", { duration: 400 });open=0;
+            }
+    }
+</script>
+
+
+
+
+
+<div id="highlights"><input   id="searchqueryinput" type="text" style="
+    width: 80%;
+    float: left;
     background: transparent;
-    border: 2px solid white;
+    border: none;
+    border-bottom: 2px solid;
+    font-size: x-large;
     color: white;
-    cursor: pointer;
-    margin-right: -2%;
     outline: none;
-    border-radius: 50%;
-    padding: 6px;
-    padding-left: 10px;
-    padding-right: 10px;"><span class="icon-search"></span></button>	<h2 style="text-align: center;">Highlights</h2>
+    font-size: xx-large;display: none;
+">
+
+<button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
+    
+    
+    <div id="whatshappening" style="
+ 
+"><h2 style="text-align: center;">Highlights</h2>
 
 
 <ul><li>Whats going on</li>
-<li>What needs to be done(Pending milestones)</li></ul>
+    <li>What needs to be done(Pending milestones)</li></ul></div>
 </div>
+
+
+<script type="text/javascript">
+
+var searchhappening=0;
+
+      function search() {
+
+        if(searchhappening==0)
+        {
+           $('#searchbutton').addClass('activated');
+
+ $('#searchqueryinput').velocity("fadeIn", { duration: 400 }) ;
+  $('#whatshappening').velocity("fadeOut", { duration: 200 }) ;
+           searchhappening=1;
+
+        }
+        else
+        {
+            $('#searchbutton').removeClass('activated'); $('#whatshappening').velocity("fadeIn", { duration: 400 }) ;
+ $('#searchqueryinput').velocity("fadeOut", { duration: 200 }) ;
+ 
+            searchhappening=0;
+        }
+
+        // body...
+    }
+</script>
+
+
+
+
+
+
 <div id="main-feed">
 	<h2>Feed</h2>
 
