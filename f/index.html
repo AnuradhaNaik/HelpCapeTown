@@ -306,30 +306,45 @@
                 <li onclick="addtofeed('c')">CTA</li>
             </ul>
         </center>
-        <form style="display: none;">
-            <input placeholder="Title">
-            <input type="" name="" placeholder="Question">
-            <input placeholder="Ref">
-            <input placeholder="CTA ref">
-            <input type="date" name="" style="
+
+        <form id="add_inp" style="display: none;">
+        <div class="floating-button" style="
+   box-shadow: none;
+    position: absolute;
+    bottom: 66%;
+    left: 35px;
+    color: turquoise;
+    border: 2px solid;
+    background: transparent;
+    display: inline-block;
+    width: 20px;
+    line-height: 1.5;
+    padding-top: 1px;
+    font-size: xx-large;
+" onclick="go_back()"> &lt; </div>
+            <input class="add_inp update_inp obj_inp event_inp milestone_inp" placeholder="Title">
+            <input class="add_inp  question_inp" type="" name="" placeholder="Question">
+            <input class="add_inp milestone_inp" placeholder="Ref">
+            <input class="add_inp cta_inp" placeholder="CTA ref">
+            <input class="add_inp event_inp" type="date" name="" style="
     display: inline-flex;
     width: 20%;
     margin-left: 14px;
     /* margin-right: 9px; */
     ">
-            <input type="time" name="" style="
+            <input class="add_inp event_inp" type="time" name="" style="
     display: inline-flex;
     width: 20%;
     margin-left: 9px;
     margin-right: 9px;
     ">
-            <input type="" name="place" placeholder="place" style="
+            <input class="add_inp update_inp" type="" name="place" placeholder="place" style="
     display: inline-flex;
     width: 20%;
     margin-left: 9px;
     ">
-            <input type="" name="" placeholder="rsvp link">
-            <input placeholder="Content (200 characters max)" style="
+            <input class="add_inp event_inp" type="" name="" placeholder="rsvp link">
+            <input id="inp-content" class="add_inp update_inp event_inp obj_inp" type="" placeholder="Content (200 characters max)" style="
     min-height: 90px;
     /* border: 1px solid grey; */
     display: inline-block;
@@ -345,11 +360,11 @@
     /* margin-left: -9px; */
     margin-left: 15px;
 " contenteditable="true">
-            <input type="file" style="
+            <input class="add_inp obj_inp update_inp milestone_inp" type="file" style="
     padding-left: 0px;
     margin-left: 0px;
 ">
-            <input type="submit" value="Go" style="
+            <input  type="submit" value="Go" style="
     width: 26%;
     background: transparent;
     border: 1px solid navy;
@@ -365,11 +380,31 @@
         </form>
     </div>
     <script type="text/javascript">
+
     var add_item = 0;
             function addtofeed(a)
             {
                  $('#add_items').velocity("fadeOut", { duration: 400 });
+                 fadeallelements();
+                 switch(a) {
+    case 'u': $('.add_inp.update_inp').velocity('fadeIn');break;
+    case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
+     case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
+      case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
+      case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
+      case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
+                            }
             }
+            function fadeallelements(){
+                $('#add_inp').velocity('fadeIn');
+                $('.add_inp').velocity("fadeOut");
+
+            }
+             function go_back(){
+                console.log('goback');
+                 $('#add_inp').velocity('fadeOut');
+                $('.add_inp').velocity("fadeOut");   $('#add_items').velocity("fadeIn", { duration: 600 });
+             }
     </script>
     <!-- End of Add Div -->
     <button class="barbutton" style="
@@ -443,9 +478,12 @@
 
                 $('#add-div').velocity("fadeOut",
   { 
-    duration: 600,
+    duration: 500,
     complete: function() { 
-       $('#add_items').css('display','block');$('#add_items').css('opacity','1')
+       $('#add_items').css('display','block');$('#add_items').css('opacity','1');
+$('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
+
+
     }
   });
                 open = 0;
