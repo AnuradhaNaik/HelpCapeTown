@@ -137,6 +137,28 @@ font-size: medium;
 bottom: 90%;
     transform: rotate(43deg);
 }
+.barbutton {
+        float: left;
+        padding: 7px;
+        font-size: x-large;
+        background: transparent;
+        border: 1px solid rgba(20, 71, 144, 0.78);
+        color: rgba(20, 71, 144, 0.78);
+        cursor: pointer;
+        margin-left: 10px;
+        outline: none;
+        border-radius: 50%;
+        padding: 13px;
+        margin-top: -6.5%;
+        background: white;
+        padding-left: 19px;
+        padding-right: 19px;
+        position: absolute;
+    }
+
+    li.follow_ ::after {
+    content: "\25BC";
+}
 @media screen and (min-device-width: 800px)
 {
 	body{
@@ -176,50 +198,46 @@ bottom: 90%;
     top: 0px;
     display: none;
 " id="add-div">
+
 <form>
 <input><br>
     <input><br><input></form>
 </div>
+<a style="float: right;margin-top: 8px;margin-right:14px;cursor: pointer;text-decoration: underline;position: absolute;right: 9px;top: 0px;">Logout</a>
 
-<button style="    float: left;
-    padding: 7px;
-    font-size: x-large;
-    background: transparent;
-    border: 1px solid ;
-    color:#258bde;
-    cursor: pointer;
-    margin-left: 2%;
-    outline: none;
-    border-radius: 50%;
-    padding: 11px;
-    margin-top: -5%;
-    background: white;
-    padding-left: 19px;
-    padding-right: 19px;">H</button>
-
-	<center>
+<button onclick="location.href='index.html'" class="barbutton">H</button>
+<button onclick="location.href='accounts-settings.html'" class="barbutton" style="  margin-left: 104px;">S</button>
+    <center>
 <header><h1>#HelpCapeTown</h1></header>
 
-<div>
-	<h2>Login</h2>
-	<ul style="list-style: none;padding: 0px;">
-		
-		<li>Facebook</li>
-		
-	</ul>
-</div>
+<!-- <div>
+    <h2>Login</h2>
+    <ul style="list-style: none;padding: 0px;">
+        
+        <li>Facebook</li>
+        
+    </ul>
+</div> -->
 
 <div>
-	<h2>Hi <span id="_name">John Doe</span></h2>
-	<ul style="list-style: none;padding: 0px;">
-		
-		<li>Edit Profile</li>
-		<li>Never miss an update from</li>
-		<li>Notification settings </li>
-		<li>Settings</li>
-		
-	</ul>
-	<h6>Thanks for stepping up.Your contributions ,achievments and everything else will stay on forever. </h6>
+    <h2>Hi <span id="_name">John Doe !</span></h2>
+    <ul style="list-style: none;padding: 0px;">
+        
+       <img src="img/jd.jpg" style="width: 43%;max-width: 300px;border: 1px solid #a5a3a3;"><span style="margin-left: -49px;position: absolute;background: rgba(255, 255, 255, 0.88);padding: 0px;padding-left: 12px;padding-right: 12px;border-radius: 50%;border: 1px solid navy;/* margin-bottom: 9px; */margin-top: 9px;cursor: pointer;">E</span>
+
+       
+        <h5 style="color: black;margin-top: 7px;margin-bottom: 5px">Data Scientist</h5>
+            <h6 style="color: black;margin-top: 0px;margin-bottom: 25px">I wanna learn more and help people get through this crisis</h6>
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a>Following 90 members &nbsp; 
+</a>  </li>
+        <li style="padding: 6px;cursor:pointer" class="follow_"><a>Followed By 7000 members &nbsp;
+</a></li>
+        
+        
+    </ul>
+    <h6 style="
+    margin-top: 90px;
+">Thanks for stepping up.Your contributions ,achievments and everything else will stay on forever. </h6>
 </div>
 
 </center>
@@ -227,5 +245,6 @@ bottom: 90%;
 <span style="margin-top: 20px;">
 © Anuradha Naik. All rights reserved.</span>
 </footer>
+
 </body>
 </html>
