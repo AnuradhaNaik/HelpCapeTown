@@ -167,7 +167,7 @@
         transform: rotate(43deg);
     }
 
-    #add-div form input {
+    #add-div .form input {
         padding: 8px;
         margin: 18px;
         font-size: large;
@@ -180,8 +180,7 @@
         margin-top: 0px;
     }
 
-    #add-div form {
-        text-align: center;
+    #add-div .form {
 
         margin-top: 37px;
     }
@@ -249,6 +248,10 @@
         background: white;
         color: turquoise;
     }
+    #inp-content:empty:before {
+    content: "Enter Content here";
+    color: grey;
+}
 
     @media screen and (min-device-width: 800px) {
         body {
@@ -299,21 +302,22 @@
         <center>
             <ul id="add_items">
                 <li onclick="addtofeed('u')">Update</li>
+                <li onclick="addtofeed()">Helpful Link</li>
                 <li onclick="addtofeed('o')">Objective</li>
                 <li onclick="addtofeed('m')">Milestone</li>
                 <li onclick="addtofeed('e')">Event</li>
                 <li onclick="addtofeed('q')">Question</li>
-                <li onclick="addtofeed('c')">CTA</li>
+               <!--  <li onclick="addtofeed('c')">CTA</li> -->
             </ul>
         </center>
 
-        <form id="add_inp" style="display: none;">
+        <center id="add_inp" style="display: none;" class="form">
         <div class="floating-button" style="
    box-shadow: none;
     position: absolute;
-    bottom: 66%;
+    bottom: 88%;
     left: 35px;
-    color: turquoise;
+    color: rgb(89, 135, 216);
     border: 2px solid;
     background: transparent;
     display: inline-block;
@@ -322,7 +326,7 @@
     padding-top: 1px;
     font-size: xx-large;
 " onclick="go_back()"> &lt; </div>
-            <input class="add_inp update_inp obj_inp event_inp milestone_inp" placeholder="Title">
+            <input id="inp-title" class="add_inp update_inp obj_inp event_inp milestone_inp" placeholder="Title">
             <input class="add_inp  question_inp" type="" name="" placeholder="Question">
             <input class="add_inp milestone_inp" placeholder="Ref">
             <input class="add_inp cta_inp" placeholder="CTA ref">
@@ -338,29 +342,16 @@
     margin-left: 9px;
     margin-right: 9px;
     ">
-       <br>     <input class="add_inp update_inp event_inp" type="" name="place" placeholder="place" style="
+       <br>     <input class="add_inp event_inp" type="" name="place" placeholder="place" style="
     display: inline-flex;
     width: 20%;
     margin-left: 9px;
     "><br>
             <input class="add_inp event_inp" type="" name="" placeholder="rsvp link">
-            <input id="inp-content" class="add_inp update_inp event_inp obj_inp" type="" placeholder="Content (200 characters max)" style="
-    min-height: 90px;
-    /* border: 1px solid grey; */
-    display: inline-block;
-    /* min-width: 70%; */
-    text-align: left;
-    font-size: medium;
-    outline: none;
-    padding: 8px;
-    /* max-width: 70%; */
-    line-height: 1.6;
-    font-family: 'Palanquin', sans-serif;
-    /* padding: 17px; */
-    /* margin-left: -9px; */
-    margin-left: 15px;
-" contenteditable="true">
-            <input class="add_inp obj_inp update_inp milestone_inp" type="file" style="
+         <div id="inp-content" class="add_inp update_inp event_inp obj_inp" type="" placeholder="Content (200 characters max)" style="min-height: 90px;/* display: inline-block; */text-align: left;font-size: medium;outline: none;padding: 8px;line-height: 1.6;font-family: Palanquin, sans-serif;margin-left: 0px;opacity: 1;width: 70%;border: 1px solid rgba(128, 128, 128, 0.72);max-height: 300px;" contenteditable="true"></div>
+
+
+            <input class="add_inp obj_inp  milestone_inp" type="file" style="
     padding-left: 0px;
     margin-left: 0px;
 ">
@@ -376,8 +367,43 @@
     background: #2d61bd;
     color: white;
     margin: 40px;
-">
-        </form>
+" onclick="addcontenttofeed()">
+<script type="text/javascript">
+   function addcontenttofeed(){
+    var title=$('#inp-title').val();
+    var c_ =$('#inp-content').html();
+var up_str='<div class="update"> <h6 class="detail-bar">  </h6> <h3>'+title+'</h3> <section style="text-align: left;font-size: large; */">'+c_+'</section> <section style=" padding: 19px; /* text-align: left; */ "> </section> <section class="action-bar"> <section> <button style=" /* float: right; */ "><span class="icon-star"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-reply"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-share"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-heart"></span></button> <br> <span><small></small></span> </section> </section> </div>';
+ $(up_str).insertAfter('#feed-title');
+
+
+
+
+
+
+
+ $('#addtofeed').removeClass('close');
+
+                $('#add-div').velocity("fadeOut",
+  { 
+    duration: 500,
+    complete: function() { 
+       $('#add_items').css('display','block');$('#add_items').css('opacity','1');
+$('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
+
+
+    }
+  });
+                open = 0;
+
+
+
+
+
+
+
+   } 
+</script>
+        </center>
     </div>
     <script type="text/javascript">
 
@@ -388,11 +414,11 @@
                  fadeallelements();
                  switch(a) {
     case 'u': $('.add_inp.update_inp').velocity('fadeIn');break;
-    case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
-     case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
-      case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
-      case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
-      case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
+    // case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
+    //  case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
+    //   case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
+    //   case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
+    //   case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
                             }
             }
             function fadeallelements(){
@@ -427,8 +453,8 @@
     <button class="barbutton" style="
    
     margin-left: 104px;
-    
-    " onclick="location.href='notifications.html'"><span class="icon-notifications"></span>
+   color: grey;border-color: grey;
+    "><span class="icon-notifications"></span>
         <span class="badge-main" style="
     font-size: small;
     background: orange;
@@ -510,8 +536,8 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
 ">
                 <h2 style="text-align: center;">Highlights</h2>
                 <ul>
-                    <li>Whats going on</li>
-                    <li>What needs to be done(Pending milestones)</li>
+                    <li>Lack of governance:DWS</li>
+                    <li>CAPE WATER AND DAMS REPORT </li>
                 </ul>
             </div>
         </div>
@@ -539,17 +565,198 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         }
         </script>
         <div id="main-feed">
-            <h2>Feed</h2>
+            <h2 id="feed-title">Feed</h2>
             <div class="update">
                 <h6 class="detail-bar">
-6/7/18 7:09<br> Alaska
+6/7/18 7:09<br>
 </h6>
-                <h3>Update</h3>
-                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">I am thankful to @SenSanders for refusing to accept this misery system,because that's what it is ,it's not a healthcare system . It's a misery system #SinglePayerSunday #EnoughIsEnough #TimesUp #Medicare4All #MedicareForAll Now! 202243121 #s1804 &amp; #hr676 5184552800 #NYHealthAct</section>
+                <h3>Lack of governance:DWS</h3>
+                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Total lack of governance in DWS has led to the inability of SA to nationally instill water resilience as mandated. Extraordinary pressure as a consequence is being placed on munis where bulk water assurance of supply is threatened. This post is not to solicit petty party political commentary but to help set the scene for a new approach to reverse the economic melt down taking place due to insufficient water in SA at the right time, place, quality and price. Without fixing DWS, nothing downstream we do will have the desired effect for SA's water assurity of supply.
+</section>
                 <section style="
     padding: 19px;
     /* text-align: left; */
-"><img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 1.3);
+">
+                   <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 1.3);
+"> --></section>
+                <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+            </div>
+
+
+
+<div class="update">
+                <h6 class="detail-bar">
+6/7/18 7:09<br>
+</h6>
+                <h3>CAPE WATER AND DAMS REPORT</h3>
+                <section style="text-align: left;font-size: large;">My latest CAPE WATER AND DAMS REPORT (9Apr). Proposed budget reveals the expected full cost of making the City water-resilient. Large sacrifices will be called for. See how it might affect you and what may be achieved over coming years. Have your say. Read more at www.bit.ly/ShMeD097. Please share widely.
+</section>
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"></section>
+                <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+
+
+<div class="update">
+                <h6 class="detail-bar">
+6/7/18 7:09<br> South Africa
+</h6>
+                <h3>Update</h3>
+                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">A Real Time Development about the Cape Town Crisis</section>
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 1.3);
+">
+                    </section>
+                <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+
+ <div class="update obj">
+                <h6 class="detail-bar">
+6/7/18 7:09<br> 
+</h6>
+                <h3>Objective</h3>
+                <section style="text-align: left;font-size: large;;">An Objectives touches on a list of priorties and suggestions. </section>
+<section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);"><ul class="priorities">
+    <li>A great point</li>
+    <li>Another great point</li>
+    <li>Yet Another great point</li>
+  <!--   <li>A great point </li>
+    <li>A great point</li>
+    <li>A great point</li> -->
+</ul></section>
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
     margin: 17px;
     border: 1px solid gainsboro;
     width: calc(100% / 2.3);
@@ -558,13 +765,21 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
     margin: 17px;
     border: 1px solid gainsboro;
     width: calc(100% / 2.3);
-"></section>
-                <section class="action-bar">
-                    <section>
+"> --></section>
+              
+
+
+
+
+
+
+
+  <section class="action-bar">
+                     <section>
                         <button style="
     /* float: right; */
    
-    ">S</button>
+    "><span class="icon-star"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
@@ -572,24 +787,75 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                         <button style="
     /* float: right; */
    
-    ">S</button>
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
                 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-            <div class="update">
+          
+
+
+   <div class="update milestone">
                 <h6 class="detail-bar">
 6/7/18 7:09<br> Alaska
 </h6>
-                <h3>Update</h3>
-                <section style="text-align: left;font-size: large;">I am thankful to @SenSanders for refusing to accept this misery system,because that's what it is ,it's not a healthcare system . It's a misery system #SinglePayerSunday #EnoughIsEnough #TimesUp #Medicare4All #MedicareForAll Now! 202243121 #s1804 & #hr676 5184552800 #NYHealthAct</section>
-                <section class="action-bar">
-                    <section>
+                <h3>Milestone : A Positive development</h3>
+                <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+                
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+">
+</section>
+
+
+
+
+
+
+
+  <section class="action-bar">
+                     <section>
                         <button style="
     /* float: right; */
    
-    ">S</button>
+    "><span class="icon-star"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
@@ -597,38 +863,50 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                         <button style="
     /* float: right; */
    
-    ">S</button>
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
                 </section>
+              
+
+
+
+
+
+
+
+
+
             </div>
-            <div class="update">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> Alaska
-</h6>
-                <h3>Update</h3>
-                <section style="text-align: left;font-size: large;">I am thankful to @SenSanders for refusing to accept this misery system,because that's what it is ,it's not a healthcare system . It's a misery system #SinglePayerSunday #EnoughIsEnough #TimesUp #Medicare4All #MedicareForAll Now! 202243121 #s1804 & #hr676 5184552800 #NYHealthAct</section>
-                <section class="action-bar">
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    ">S</button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    ">S</button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-        </div>
+
+
+
+
+         
+
+
+
+
+
+
+
         <ul id="add-">
             <li>Update</li>
             <li>Objective</li>
