@@ -110,7 +110,7 @@
     .update {
 
 
-        padding: 7px;
+        padding: 9px;
         /* background: grey; */
         min-height: 300px;
         border: 1px solid #c1c1c1b0;
@@ -254,6 +254,67 @@
     color: grey;
 }
 
+
+
+
+ul.poll_options{
+        list-style: none;
+    padding-left: 3px;
+}
+ul.poll_options li section {
+      /* margin-top: 9px; */
+    padding: 6px;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    /* cursor: pointer; */
+    display: inline-block;
+   
+}
+ul.poll_options li section>span
+{
+    position: absolute;margin-top: -11px;
+}
+ul.poll_options li{
+       border: 2px solid rgba(47, 102, 212, 0.38);
+    width: 30%;
+    cursor: pointer;
+    margin-top: 35px;
+    padding: 6px;
+  
+}
+ul.poll_options.polldone li{
+    border:none;
+    margin-top:7px;
+    width:50%; 
+}
+ul.poll_options.polldone li section>span
+{
+    margin-top: 0px;
+}
+ul.poll_options.polldone {
+    list-style: none;
+}
+ul.poll_options.polldone li section {
+    background: rgba(176, 197, 239, 0.38);min-height: 26px;
+}
+ul.poll_options.polldone li section.selected {
+    background: rgba(47, 102, 212, 0.38);
+}
+
+
+
+ul.poll_options>li>span {
+    float: right;
+    opacity:0;
+}
+ul.poll_options.polldone>li>span {
+    opacity: 1;
+}
+
+
+
+
     @media screen and (min-device-width: 800px) {
         body {
             font-size: x-large;
@@ -286,6 +347,15 @@
             margin-top: 21pt;
         }
     }
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 
@@ -310,7 +380,8 @@
                 <li onclick="addtofeed('o')">Objective</li>
                 <li onclick="addtofeed('m')">Milestone</li>
                 <li onclick="addtofeed('e')">Event</li>
-                <li onclick="addtofeed('q')">Question</li>
+                <li onclick="addtofeed('q')">Question <!-- poll included in this --></li>
+
                <!--  <li onclick="addtofeed('c')">CTA</li> -->
             </ul>
         </center>
@@ -829,6 +900,443 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
 
             </div>
           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="update ques">
+                <h6 class="detail-bar">
+6/7/18 7:09<br> 
+</h6>
+                <h3>Poll Title</h3>
+<!--   <h5 style="    margin: 6px;
+    text-align: left;
+    margin-left: 13px;
+    color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+ -->
+                <section class="poll-q" style="text-align: left;font-size: large;;">Asks a poll question</section>
+               
+
+<section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);" ><ul  class=" poll_options">
+    <li><section style="width:45%"><span style="">Option A</span></section> <span >35%</span></li>
+    <li><section style="width:35%"><span style="">Option B</span></section> <span >20%</span></li>
+   <li ><section style="width:55%"><span style="">Option C</span></section> <span >45%</span></li>
+  <!--   <li>A great point </li>
+    <li>A great point</li>
+    <li>A great point</li> -->
+</ul></section>
+
+
+
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+">
+                    <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+"> --></section>
+              
+
+
+
+
+
+
+
+  <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="update ques">
+                <h6 class="detail-bar">
+6/7/18 7:09<br> 
+</h6>
+                <h3>Question</h3>
+  <h5 style="    margin: 6px;
+    text-align: left;
+    margin-left: 13px;
+    color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+
+                <section style="text-align: left;font-size: large;;">Asks a legitimate Query about the cause </section>
+               
+
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+">
+                    <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+"> --></section>
+              
+
+
+
+
+
+
+
+  <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+<div class="update hlink">
+                <h6 class="detail-bar">
+6/7/18 7:09<br> Alaska
+</h6>
+                <h3>Helpful link</h3>
+                <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+<small><small>Found it helpful because:It talks about <a style="cursor:pointer;text-decoration: underline">something</a> we need </small></small>
+                
+                <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 2.3);
+">
+</section>
+
+
+
+
+
+
+
+  <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+              
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="update">
+                <h6 class="detail-bar">
+6/7/18 7:09<br>
+</h6>
+                <h3>Event</h3>
+
+                   <section style="
+    padding: 19px;
+    /* text-align: left; */
+"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg"  style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 1.3);
+">
+                   <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+    margin: 17px;
+    border: 1px solid gainsboro;
+    width: calc(100% / 1.3);
+"> --></section>
+                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Event Description
+</section>
+
+      <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">When : 12th May 2018
+</section>
+     <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Where : Hollow Creek,NJ
+</section>
+     <section style="text-align: left;font-size: large;">RSVP : <a style="text-decoration: underline;">bitly/rsvp</a>
+</section>
+             
+                <section class="action-bar">
+                     <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-star"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-reply"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                    <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-share"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                      <section>
+                        <button style="
+    /* float: right; */
+   
+    "><span class="icon-heart"></span></button>
+                        <br>
+                        <span><small>6.9k</small></span>
+                    </section>
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    <div class="update milestone">
