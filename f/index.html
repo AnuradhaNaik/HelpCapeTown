@@ -19,13 +19,13 @@
     }
 
     * {
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
 
     body {
         font-size: xx-large;
         margin: 0px;
-        transition: 0.3s ease;
+        transition: 0.1s ease;
         line-height: 1.6;
         color: #113f80;
         padding: 0px;
@@ -136,6 +136,7 @@
         text-align: right;
         margin: 7px;
         border-top: 1px solid rgba(0, 45, 128, 0.39);
+        transition: 0.1s ease;
     }
 
     .action-bar button {
@@ -151,7 +152,12 @@
         padding: 10px;
         padding-left: 17px;
         padding-right: 17px;
+        transition: 0.1s ease;    
     }
+     .action-bar button:active, .action-bar section.selected button ,.action-bar section.selected,.action-bar section:active{
+    color: #f9cc01;
+     } 
+    
 
     .action-bar section {
         display: inline-block;
@@ -312,7 +318,21 @@ ul.poll_options.polldone>li>span {
     opacity: 1;
 }
 
+ul#share-items li {
+    list-style: none;
+    padding: 17px;
+    border-bottom: 1px solid;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 17px;
+    cursor: pointer;
+}
 
+ul#share-items {
+    padding-left: 0px;
+    width: 60%;
+    margin-top: 18px;
+}
 
 
     @media screen and (min-device-width: 800px) {
@@ -362,7 +382,92 @@ ul.poll_options.polldone>li>span {
 <body>
     <script src="js/jquery.js"></script>
     <script src="js/velocity.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        
+        $('.action-bar button .icon-reply').click(function (argument) {
+           $(this).parent().toggleClass('selected');
+        });
+        });
+
+
+    </script>
     <!-- Add something to feed -->
+
+  <div style="
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 100%;
+    z-index: 500;
+    top: 0px;
+    padding: 20px;text-align: center;display: none;
+" id="share-div">
+        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Share</h2>
+        <center>
+         <ul id="share-items">
+            <li>Timeline</li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+        </ul>
+        </center>
+        </div>
+
+  <div style="
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 100%;
+    z-index: 500;
+    top: 0px;
+    padding: 20px;text-align: center;display: none;
+" id="reply-div">
+        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Respond</h2>
+        <center>
+        <ul id="respond-items">
+            <li>Add To</li>
+            <li>Question</li>
+            
+        </ul>
+        </center>
+        </div>
+
+        <div style="
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 100%;
+    z-index: 500;
+    top: 0px;
+    padding: 20px;text-align: center;display: none;
+" id="more-div">
+        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">More</h2>
+        <center>
+        <ul id="respond-items">
+
+            <li>Reference</li>
+            <li>Pin</li>
+            <li>Report</li>
+            
+        </ul>
+        </center>
+        </div>
+
+        <div style="
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 100%;
+    z-index: 500;
+    top: 0px;
+    padding: 20px;text-align: center;display: none;
+" id="ref-div">
+        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Reference</h2>
+        <center>
+
+        </center>
+        </div>
+        
     <div style="
     position: fixed;
     width: 100%;
@@ -565,6 +670,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
 ">20</span>
     </button>
     <center>
+
         <header>
             <h1 style="padding-top: 40px">#HelpCapeTown</h1>
             <h4>Let's come together to help Cape Town achieve water stabilty</h4></header>
@@ -690,7 +796,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                         <button style="
     /* float: right; */
    
-    "><span class="icon-heart"></span></button>
+    " class="lovbutton"><span class="icon-heart"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
@@ -799,7 +905,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                         <button style="
     /* float: right; */
    
-    "><span class="icon-heart"></span></button>
+    " class="lovbutton"><span class="icon-heart"></span></button>
                         <br>
                         <span><small>6.9k</small></span>
                     </section>
