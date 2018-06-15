@@ -159,6 +159,49 @@ bottom: 90%;
     li.follow_ ::after {
     content: "\25BC";
 }
+
+.f_ ul.sub {}
+
+.sub>li:after {
+    content: "";
+}
+
+.sub>li {
+  list-style: none;
+    margin-bottom: 28px;
+    margin-top: 14px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    /* max-width: 270px;*/
+}
+
+ul.sub:after {
+    content: "";
+}
+.f_o_l.expanded {
+    position: absolute;
+    z-index: 30;
+    background: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.f_o_l.expanded .follow_ :after
+{
+content: "";
+}
+.f_o_l.expanded button{
+    display: none;
+}
+.f_o_l.expanded .sub>li
+{
+    margin-left:50px;
+    margin-right: 50px;
+    display: inline-block;
+}
 @media screen and (min-device-width: 800px)
 {
 	body{
@@ -228,11 +271,60 @@ bottom: 90%;
        
         <h5 style="color: black;margin-top: 7px;margin-bottom: 5px">Data Scientist</h5>
             <h6 style="color: black;margin-top: 0px;margin-bottom: 25px">I wanna learn more and help people get through this crisis</h6>
+        <div id="following" class="f_o_l">
         <li style="padding : 6px;cursor: pointer" class="follow_"><a>Following 90 members &nbsp; 
 </a>  </li>
-        <li style="padding: 6px;cursor:pointer" class="follow_"><a>Followed By 7000 members &nbsp;
-</a></li>
-        
+<ul class="sub">
+    
+
+<li>
+    <img src="rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
+<span style="
+    cursor: pointer;
+"> @Rania</span></li><li>
+    <img src="rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
+    @Rania</li>
+    <button style="
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #142d987a;
+    background: white;
+    letter-spacing: 0.09em;
+    margin-bottom: 38px;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 4px;
+">More</button>
+</ul></div>
+     <div id="followedby" class="f_o_l">
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a>Followed by 9890 members &nbsp; 
+</a>  </li>
+<ul class="sub">
+    
+
+<li>
+    <img src="rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
+<span style="
+    cursor: pointer;
+"> @Rania</span></li><li>
+    <img src="rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
+    @Rania</li>
+    <button style="
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #142d987a;
+    background: white;
+    letter-spacing: 0.09em;
+    margin-bottom: 38px;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 4px;
+">More</button>
+</ul></div>
         
     </ul>
 
