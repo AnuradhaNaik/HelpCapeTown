@@ -265,12 +265,74 @@ content: "";
 <div>
     <h2>Hi <span id="_name">John Doe !</span></h2>
     <ul style="list-style: none;padding: 0px;">
-        
-       <img src="img/jd.jpg" style="width: 43%;max-width: 300px;border: 1px solid #a5a3a3;"><span style="margin-left: -59px;position: absolute;background: rgba(255, 255, 255, 0.88);padding: 0px;padding-left: 12px;padding-right: 12px;padding-top:9px;padding-bottom:9px;border-radius: 50%;border: 1px solid navy;/* margin-bottom: 9px; */margin-top: 9px;cursor: pointer;" class="icon-edit"></span>
+     <style type="text/css">
+    
+    #edit-pen{
+        margin-left: -59px;position: absolute;background: rgba(255, 255, 255, 0.88);padding: 0px;padding-left: 12px;padding-right: 12px;padding-top:9px;padding-bottom:9px;border-radius: 50%;border: 1px solid navy;/* margin-bottom: 9px; */margin-top: 9px;cursor: pointer;
+    }
+    #edit-pen.showedit{
+        background: white;box-shadow: 0px 0px 9px #fff;
+    }
+    form#edit-prof{
+        display: none;
+    }
+    form#edit-prof.showedit{
+        display: inline-block;
+    }
+    form#edit-prof label {
+    padding: 12px;
+    margin-top: 20px;
+}
+
+form#edit-prof input,form#edit-prof textarea {
+       float: right;
+    padding: 2px;
+    font-size: large;
+    /* margin-top: 19px; */
+    border: 2px solid rgba(0, 0, 128, 0.30);
+    min-width: 240px;
+    padding: 4px;outline: none;
+}
+</style>   
+       <img src="img/jd.jpg"  style="width: 43%;max-width: 300px;border: 1px solid #a5a3a3;"><span onclick="edit()" id="edit-pen" style="" class="  icon-edit"></span>
+       <script type="text/javascript">
+       var s=false;
+           function edit() {
+
+          if(s){  document.getElementById('edit-pen').classList="icon-edit";document.getElementById('edit-prof').classList=""; s=false;}
+          else  {  document.getElementById('edit-pen').classList="showedit icon-edit"; document.getElementById('edit-prof').classList="showedit";;s=true; }
+           }
+       </script>
 
        
         <h5 style="color: black;margin-top: 7px;margin-bottom: 5px">Data Scientist</h5>
             <h6 style="color: black;margin-top: 0px;margin-bottom: 25px">I wanna learn more and help people get through this crisis</h6>
+
+
+
+<form style="margin-top: 6%;text-align: left;    margin: 16px;
+    margin-bottom: 109px;" id="edit-prof" >
+    <h3 style="text-align: center;">Edit Profile</h3>
+<div><label>Name</label><input type="" name=""></div><br>
+<div><label>Motivation</label><input type="text" name=""></div> <br>
+<div><label>Birthday </label><input type="date" name=""></div><br>
+<div><label>Email</label><input type="email" name=""> </div><br> 
+<div><label>FB</label><input type="email" name=""> </div><br> 
+<div><label>Twitter</label><input type="email" name=""> </div><br> 
+<div><label>Instagram</label><input type="email" name=""></div> <br> 
+<div style="
+    text-align: center;
+"><input type="submit" name="Save" value="Save" style="
+    background: navy;
+    color: white;
+    padding: 7px;
+    min-width: 100px;
+    float: none;
+    margin-left: 68px;
+    cursor: pointer;
+"></div>
+</form>
+
         <div id="following" class="f_o_l">
         <li style="padding : 6px;cursor: pointer" class="follow_"><a>Following 90 members &nbsp; 
 </a>  </li>
@@ -429,17 +491,6 @@ content: "";
     
 </div>
 
-<!-- <form style="margin-top: 6%;text-align: left;display: inline-block;">
-    
-<label>Name</label><input type="" name=""><br>
-<label>Motivation</label><textarea></textarea> <br>
-<label>Experience Level: &nbsp;</label> <label>Beginner</label><br>
-<label>Age </label> <label>34</label><br>
-<label>Email</label><input type="email" name=""> <br> 
-<label>FB</label><input type="email" name=""> <br> 
-<label>Twitter</label><input type="email" name=""> <br> 
-<label>Instagram</label><input type="email" name=""> <br> 
-</form> -->
 
     <h6 style="
     margin-top: 90px;
