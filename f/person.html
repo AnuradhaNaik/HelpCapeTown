@@ -333,10 +333,54 @@ form#edit-prof input,form#edit-prof textarea {
 "></div>
 </form>
 
-        <div id="following" class="f_o_l">
-        <li style="padding : 6px;cursor: pointer" class="follow_"><a>Following 90 members &nbsp; 
+      
+
+<style type="text/css">
+    
+    .follow_ a {
+    text-decoration: underline;
+    /* color: #3871d8; */
+}
+.follow_ a.show {
+    text-decoration: none;
+}
+.sub{
+    display: none;
+}
+.sub.show {
+    display: inline-block;
+}
+</style>
+
+ 
+
+
+
+
+
+<div id="following" class="f_o_l">
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a  onclick="followingclick()" id="following_link">Following 90 members &nbsp; 
 </a>  </li>
-<ul class="sub">
+
+<script type="text/javascript">
+       var followedby=false;
+           function fbyclick() {
+
+          if(followedby){  document.getElementById('followedby_link').classList="";document.getElementById('followedby-list').classList="sub"; followedby=false;}
+          else  {   document.getElementById('followedby_link').classList="show";document.getElementById('followedby-list').classList="sub show";;followedby=true; }
+           }
+       </script>
+
+
+       <script type="text/javascript">
+       var following=false;
+           function followingclick() {
+
+          if(following){  document.getElementById('following_link').classList="";document.getElementById('following-list').classList="sub"; following=false;}
+          else  {   document.getElementById('following_link').classList="show";document.getElementById('following-list').classList="sub show";;following=true; }
+           }
+       </script>
+<ul class="sub" id="following-list" >
     
 
 <li>
@@ -360,10 +404,18 @@ form#edit-prof input,form#edit-prof textarea {
     border-radius: 4px;
 ">More</button>
 </ul></div>
-     <div id="followedby" class="f_o_l">
-        <li style="padding : 6px;cursor: pointer" class="follow_"><a>Followed by 9890 members &nbsp; 
+
+
+
+
+
+
+
+
+<div id="followedby" class="f_o_l">
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a  onclick="fbyclick()" id="followedby_link">Followed by 9890 members &nbsp; 
 </a>  </li>
-<ul class="sub">
+<ul class="sub" id="followedby-list">
     
 
 <li>
@@ -387,8 +439,29 @@ form#edit-prof input,form#edit-prof textarea {
     border-radius: 4px;
 ">More</button>
 </ul></div>
-        
-    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div style="
     padding: 8px;
