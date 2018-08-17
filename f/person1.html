@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<title>Help Cape Town-Member Page</title>
 <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
     <link href="ico.css" rel="stylesheet">
@@ -232,35 +230,6 @@ content: "";
     margin-top: 21pt;
 }
 }
-
-#profileimage{
-    width: 43%;max-width: 300px;border: 1px solid #a5a3a3;
-}
-
-@media (min-device-width: 320px) and (max-device-width: 780px) {
-
-
-    .barbutton{
-    font-size: 180%;padding: 39px;
- }
- .barbutton:nth-child(1){
-margin-left: 184px;
- }
-
- #maintitle{
-    font-size: 3em;padding-top: 120px;
- }
-
-  #mainname{
-        font-size: 200%;padding: 6%;
- }
- #profileimage{
-        width: 73%;max-width: 800px;
- }
- h6.detail-bar{
-    font-size: large;
- }
-}
 	</style>
 </head>
 <body>
@@ -278,12 +247,18 @@ margin-left: 184px;
 <input><br>
     <input><br><input></form>
 </div>
-<a style="float: right;margin-top: 8px;margin-right:14px;cursor: pointer;text-decoration: underline;position: absolute;right: 9px;top: 0px;">Logout</a>
+<a style="float: right;margin-top: 8px;margin-right:14px;cursor: pointer;text-decoration: underline;position: absolute;right: 9px;top: 0px;font-size: -webkit-xxx-large;">Logout</a>
 
-<button  onclick="location.href='index.html'" class="barbutton"><span class="icon-home"></span></button>
-<button class="barbutton" style="  margin-left: 104px; color: grey;border-color: grey;"><span class="icon-settings"></span></button>
+<button onclick="location.href='index.html'" class="barbutton" style="
+    font-size: 180%;
+    padding: 39px;
+"><span class="icon-home"></span></button>
+<button class="barbutton" style="margin-left: 104px;color: grey;border-color: grey;margin-left: 184px;color: grey;border-color: grey;font-size: 180%;padding: 39px;"><span class="icon-settings"></span></button>
     <center>
-<header><h1 id="maintitle">#HelpCapeTown</h1></header>
+<header><h1 style="
+    padding-top: 120px;
+    font-size: 3em;
+">#HelpCapeTown</h1></header>
 
 <!-- <div>
     <h2>Login</h2>
@@ -295,7 +270,9 @@ margin-left: 184px;
 </div> -->
 
 <div>
-    <h2 id="mainname">Hi <span id="_name">John Doe !</span></h2>
+    <h2 style="
+    font-size: 190%;
+">Hi <span id="_name">John Doe !</span></h2>
     <ul style="list-style: none;padding: 0px;">
      <style type="text/css">
     
@@ -326,7 +303,11 @@ form#edit-prof input,form#edit-prof textarea {
     padding: 4px;outline: none;
 }
 </style>   
-       <img id="profileimage"  src="img/jd.jpg"  style=""><span onclick="edit()" id="edit-pen" style="" class="  icon-edit"></span>
+       <img src="img/jd.jpg" style="width: 73%;/* max-width: 500px; */border: 1px solid #a5a3a3;"><span onclick="edit()" id="edit-pen" style="
+    font-size: -webkit-xxx-large;
+    padding: 20px;
+    margin-left: -100px;
+" class="icon-edit"></span>
        <script type="text/javascript">
        var s=false;
            function edit() {
@@ -337,13 +318,13 @@ form#edit-prof input,form#edit-prof textarea {
        </script>
 
        
-        <h5 style="color: black;margin-top: 7px;margin-bottom: 5px">Data Scientist</h5>
-            <h6 style="color: black;margin-top: 0px;margin-bottom: 25px">I wanna learn more and help people get through this crisis</h6>
+        <h5 style="color: black;margin-top: 7px;margin-bottom: 5px;font-weight: inherit;">Data Scientist</h5>
+            <h6 style="color: black;margin-top: 0px;margin-bottom: 25px;/* text-align: left; */">I wanna learn more and help people get through this crisis</h6>
 
 
 
 <form style="margin-top: 6%;text-align: left;    margin: 16px;
-    margin-bottom: 109px;" id="edit-prof" >
+    margin-bottom: 109px;" id="edit-prof" class="">
     <h3 style="text-align: center;">Edit Profile</h3>
 <div><label>Name</label><input type="" name=""></div><br>
 <div><label>Motivation</label><input type="text" name=""></div> <br>
@@ -391,7 +372,7 @@ form#edit-prof input,form#edit-prof textarea {
 
 
 <div id="following" class="f_o_l">
-        <li style="padding : 6px;cursor: pointer" class="follow_"><a  onclick="followingclick()" id="following_link">Following 90 members &nbsp; 
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a onclick="followingclick()" id="following_link" class="">Following 90 members &nbsp; 
 </a>  </li>
 
 <script type="text/javascript">
@@ -412,28 +393,27 @@ form#edit-prof input,form#edit-prof textarea {
           else  {   document.getElementById('following_link').classList="show";document.getElementById('following-list').classList="sub show";;following=true; }
            }
        </script>
-<ul class="sub" id="following-list" >
+<ul class="sub" id="following-list">
     
 
 <li>
-    <img src="rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
+    <img src="rb.jpg" style="max-width: 240px;border-radius: 50%;display: block;min-height: 232px;cursor: pointer;">
 <span style="
     cursor: pointer;
-"> @Rania</span></li><li>
-    <img src="rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
-    @Rania</li>
+    font-size: 120%;
+"> @Rania</span></li>
     <button style="
-    padding-right: 28px;
-    padding-left: 28px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border: 1px solid #142d987a;
     background: white;
     letter-spacing: 0.09em;
     margin-bottom: 38px;
     cursor: pointer;
-    font-size: large;
-    border-radius: 4px;
+    font-size: -webkit-xxx-large;
+    border-radius: 9px;
 ">More</button>
 </ul></div>
 
@@ -445,31 +425,13 @@ form#edit-prof input,form#edit-prof textarea {
 
 
 <div id="followedby" class="f_o_l">
-        <li style="padding : 6px;cursor: pointer" class="follow_"><a  onclick="fbyclick()" id="followedby_link">Followed by 9890 members &nbsp; 
+        <li style="padding : 6px;cursor: pointer" class="follow_"><a onclick="fbyclick()" id="followedby_link" class="show">Followed by 9890 members &nbsp; 
 </a>  </li>
-<ul class="sub" id="followedby-list">
+<ul class="sub show" id="followedby-list">
     
 
-<li>
-    <img src="rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
-<span style="
-    cursor: pointer;
-"> @Rania</span></li><li>
-    <img src="rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
-    @Rania</li>
-    <button style="
-    padding-right: 28px;
-    padding-left: 28px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 1px solid #142d987a;
-    background: white;
-    letter-spacing: 0.09em;
-    margin-bottom: 38px;
-    cursor: pointer;
-    font-size: large;
-    border-radius: 4px;
-">More</button>
+
+    
 </ul></div>
 
 
@@ -498,7 +460,7 @@ form#edit-prof input,form#edit-prof textarea {
 <div style="
     padding: 8px;
 ">
-<h2>Saved </h2>
+<h1>Saved </h1>
     <div class="update">
                 <h6 class="detail-bar">
                 <div style="
@@ -600,7 +562,7 @@ form#edit-prof input,form#edit-prof textarea {
     <h6 style="
     margin-top: 90px;
 ">Thanks for stepping up.Your contributions ,achievments and everything else will stay on forever. </h6>
-</div>
+</ul></div>
 
 </center>
 <footer id="footer" style="min-height: 200px;" class="target">
@@ -608,5 +570,5 @@ form#edit-prof input,form#edit-prof textarea {
 © Anuradha Naik. All rights reserved.</span>
 </footer>
 
-</body>
-</html>
+
+</body></html>

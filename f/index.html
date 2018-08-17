@@ -397,8 +397,56 @@ ul#respond-items li {
     min-width: 200px;
     margin-top: 30px;
 }
-
-
+.maincontent{
+    text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);
+}
+@media (min-device-width: 320px) and (max-device-width: 780px) {
+  
+ .barbutton{
+    font-size: 180%;padding: 39px;
+ }
+ .barbutton:nth-child(1){
+margin-left: 184px;
+ }
+ .maincontent{
+    font-size: xx-large;
+ }
+ #maintitle{
+    font-size: 3em;margin-top: 120px;
+ }
+ #mainsubtitle{
+        font-size: 130%;
+ }
+ #searchbutton{
+        font-size: 110%;
+    padding: 26px;
+ }
+ #searchqueryinput{
+    font-size: 100%;
+ }
+ #highlights{
+    padding-top: 30px;padding-bottom: 60px;
+ }
+ h6.detail-bar{
+    font-size: xx-large;
+ }
+ #add-div h2{
+    font-size: 270%;
+ }
+ ul#add_items {
+    font-size: 190%;
+ }
+ #highlights{
+        font-size: 177%;
+ }
+  .action-bar button{
+    font-size: 120%;
+  }
+  .floating-button{
+    font-size: 220%;
+    padding: 25px;padding-left: 40px;padding-right: 40px;
+  }
+}
 
     @media screen and (min-device-width: 800px) {
         body {
@@ -772,8 +820,8 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
     <center>
 
         <header>
-            <h1 style="padding-top: 40px">#HelpCapeTown</h1>
-            <h4>Let's come together to help Cape Town achieve water stabilty</h4></header>
+            <h1 style="padding-top: 40px" id="maintitle">#HelpCapeTown</h1>
+            <h4 id="mainsubtitle">Let's come together to help Cape Town achieve water stabilty</h4></header>
         <button id="addtofeed" class="floating-button" onclick="addsomethingtofeed()">+</button>
         <script type="text/javascript">
         var open = 0;
@@ -847,7 +895,6 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         }
         </script>
         <div id="main-feed">
-            <h2 id="feed-title">Feed</h2>
             <div class="update">
                 <h6 class="detail-bar">
 
@@ -860,8 +907,8 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
 ">@John_Doe</i></div>
 6/7/18 7:09<br>
 </h6>
-                <h3>Lack of governance:DWS</h3>
-                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Total lack of governance in DWS has led to the inability of SA to nationally instill water resilience as mandated. Extraordinary pressure as a consequence is being placed on munis where bulk water assurance of supply is threatened. This post is not to solicit petty party political commentary but to help set the scene for a new approach to reverse the economic melt down taking place due to insufficient water in SA at the right time, place, quality and price. Without fixing DWS, nothing downstream we do will have the desired effect for SA's water assurity of supply.
+                <h3></h3>
+                <section class="maincontent"><b><big>Lack of governance DWS : </big></b>Total lack of governance in DWS has led to the inability of SA to nationally instill water resilience as mandated. Extraordinary pressure as a consequence is being placed on munis where bulk water assurance of supply is threatened. This post is not to solicit petty party political commentary but to help set the scene for a new approach to reverse the economic melt down taking place due to insufficient water in SA at the right time, place, quality and price. Without fixing DWS, nothing downstream we do will have the desired effect for SA's water assurity of supply.
 </section>
                 <section style="
     padding: 19px;
