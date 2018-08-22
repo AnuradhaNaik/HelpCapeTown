@@ -155,6 +155,20 @@ bottom: 90%;
         padding-right: 19px;
         position: absolute;
     }
+
+
+@media (min-device-width: 320px) and (max-device-width: 780px) {
+ul#more-notifications li big {
+    font-size: -webkit-xxx-large;
+}
+div>h2{
+    text-decoration: underline;
+    font-size: 200%;
+}
+}
+
+
+
 @media screen and (min-device-width: 800px)
 {
 	body{
@@ -181,6 +195,9 @@ bottom: 90%;
     font-size: 20pt;
     margin-top: 21pt;
 }
+.main-header>ul>li{
+    text-align: left;
+}
 }
 	</style>
 </head>
@@ -206,28 +223,22 @@ bottom: 90%;
 
 	<center>
 
-<header><h1 style="margin-top: 0px;margin-bottom: 0px">#HelpCapeTown</h1></header>
-<h4>Welcome to your notifications John Doe</h4>
-<div>
+<header><h1 id="maintitle" style="margin-top: 0px;margin-bottom: 0px">#HelpCapeTown</h1></header>
+<h4  id="mainsubtitle">Welcome to your notifications John Doe</h4>
+<div class="main-header">
 	<h2>Milestones</h2>
 
 	<ul style="list-style: none;padding: 0px;">
 		
 <li style="
-    text-align: left;
+    
 ">
     
 
 
 
 
-  <img src="img/jd.jpg" style="width: 13%;max-width: 300px;border: 1px solid #a5a3a3;/* float: left; */position: relative;/* margin: 80px; */border-radius: 50%;"><i style="
-    /* margin-top: -60px; */
-    /* margin-left: 90px; */
-          "><a style="
-    text-decoration: underline;
-    cursor: pointer;
-">@John_Doe</a> referenced you</i><div class="update">
+  <img src="img/jd.jpg" class="dp notify">@John_Doe</a> referenced you</i><div class="update">
                 <h6 class="detail-bar">
                 <div style="
     /* float: left; */
@@ -366,12 +377,180 @@ bottom: 90%;
 
 <div>
     <h2>More</h2>
-    <ul style="list-style: none;padding: 0px;">
+   <ul style="list-style: none;padding: 0px;" id="more-notifications">
         
-       <li>Followed</li>
-        <li>Likes</li>
-<li>Validate</li><li>
-</li><li>Pin</li>
+       <li><big style="
+    padding: 8px;
+    /* border: 1px solid #9c9c9c; */
+    border-left: none;
+    border-right: none;
+">Followed</big></li>
+<ul style="
+    list-style: none;
+    padding: 19px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+"><li style="
+    text-align: left;
+">
+    
+
+
+
+
+  <img src="img/jd.jpg" class="dp notify"><i style="
+    /* margin-top: -60px; */
+    /* margin-left: 90px; */
+    font-size: xx-large;
+    "><a style="
+    text-decoration: underline;
+    cursor: pointer;
+">@John_Doe</a> followed you</i>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>
+        <li><big style="
+    padding: 8px;
+    /* border: 1px solid #9c9c9c; */
+    border-left: none;
+    border-right: none;
+">Likes</big></li><ul style="
+    list-style: none;
+    padding: 19px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+"><li style="
+    text-align: left;
+">
+    
+
+
+
+
+  <img src="img/jd.jpg" class="dp notify"><i style="
+    /* margin-top: -60px; */
+    /* margin-left: 90px; */
+    font-size: xx-large;
+    "><a style="
+    text-decoration: underline;
+    cursor: pointer;
+">@John_Doe</a> liked your post ...</i>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>
+<!--<li><big style="
+    padding: 8px;
+    border: 1px solid #9c9c9c;
+    border-left: none;
+    border-right: none;
+">Validate</big></li>--><!--<ul style="
+    list-style: none;
+    padding: 19px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+"><li style="
+    text-align: left;
+">
+    
+
+
+
+
+  <img src="img/jd.jpg" style="width: 19%;max-width: 300px;border: 1px solid #a5a3a3;/* float: left; */position: relative;/* margin: 80px; */border-radius: 50%;"><i style="
+    /* margin-top: -60px; */
+    /* margin-left: 90px; */
+    font-size: xx-large;
+    "><a style="
+    text-decoration: underline;
+    cursor: pointer;
+">@John_Doe</a> referenced you</i>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>--><li><big style="
+    padding: 8px;
+    /* border: 1px solid #9c9c9c; */
+    border-left: none;
+    border-right: none;
+">Pin</big></li><ul style="
+    list-style: none;
+    padding: 19px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+"><li style="
+    text-align: left;
+">
+    
+
+
+
+
+  <img src="img/jd.jpg" class="dp notify"><i style="
+    /* margin-top: -60px; */
+    /* margin-left: 90px; */
+    font-size: xx-large;
+    "><a style="
+    text-decoration: underline;
+    cursor: pointer;
+">@John_Doe</a> pinned your post</i>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>
         
     </ul>
 </div>

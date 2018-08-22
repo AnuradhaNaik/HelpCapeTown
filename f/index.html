@@ -400,8 +400,30 @@ ul#respond-items li {
 .maincontent{
     text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);
 }
+.dp{
+    width: 7%;max-width: 300px;border: 1px solid #a5a3a3;/* float: left; */position: relative;/* margin: 80px; */border-radius: 50%;
+}
+#searchqueryinput{
+    width: 80%; float: left; background: transparent; border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 2px solid; color: white; outline: none; font-size: xx-large;display: none;
+}
+ .dp.notify {
+    width:10%;
+  }
+
 @media (min-device-width: 320px) and (max-device-width: 780px) {
   
+  .dp{
+    width:17%;
+  }
+  .dp.notify {
+    width:19%;
+  }
+#smallmsg{
+    font-size: 120%;
+}
+  #searchqueryinput{
+    font-size: 130%;
+  }
  .barbutton{
     font-size: 180%;padding: 39px;
  }
@@ -425,7 +447,7 @@ margin-left: 184px;
     font-size: 100%;
  }
  #highlights{
-    padding-top: 30px;padding-bottom: 60px;
+    padding-top: 30px;padding-bottom: 120px;
  }
  h6.detail-bar{
     font-size: xx-large;
@@ -849,15 +871,6 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         </script>
         <div id="highlights">
             <input id="searchqueryinput" type="text" style="
-    width: 80%;
-    float: left;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid;
-    font-size: x-large;
-    color: white;
-    outline: none;
-    font-size: xx-large;display: none;
 ">
             <button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
             <div id="whatshappening" style="
@@ -901,7 +914,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                 <div style="
     /* float: left; */
     text-align: left;
-"><img src="img/jd.jpg" style="width: 7%;max-width: 300px;border: 1px solid #a5a3a3;/* float: left; */position: relative;/* margin: 80px; */border-radius: 50%;"><i style="
+"><img src="img/jd.jpg" class="dp"><i style="
     /* margin-top: -60px; */
     /* margin-left: 90px; */
 ">@John_Doe</i></div>

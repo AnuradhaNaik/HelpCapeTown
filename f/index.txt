@@ -838,7 +838,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                 <div style="
     /* float: left; */
     text-align: left;
-"><img src="img/jd.jpg" style="width: 7%;max-width: 300px;border: 1px solid #a5a3a3;/* float: left; */position: relative;/* margin: 80px; */border-radius: 50%;"><i style="
+"><img src="img/jd.jpg" style="" class="dp"><i style="
     /* margin-top: -60px; */
     /* margin-left: 90px; */
 ">@John_Doe</i></div>
