@@ -295,10 +295,10 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
     display: none;
 ">20</span>
     </button>
-    <button class="barbutton" style="
+   <button class="barbutton" style="
    
    
-    " id="icon-settings"><span class="icon-notifications"></span>
+    " id="icon-settings" onclick="location.href='notifications.html'"><span class="icon-notifications"></span>
         <span class="badge-main" style="
     font-size: small;
     background: orange;
@@ -336,7 +336,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
     <center>
 
         <header>
-            <h1 style="padding-top: 40px" id="maintitle">#HelpCapeTown</h1>
+            <h1  id="maintitle">#HelpCapeTown</h1>
             <h4 id="mainsubtitle">Let's come together to help Cape Town achieve water stabilty</h4></header>
         <button id="addtofeed" class="floating-button" onclick="addsomethingtofeed()">+</button>
         <script type="text/javascript">
@@ -388,12 +388,17 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
 
                 $('#searchqueryinput').velocity("fadeIn", { duration: 400 });
                 $('#whatshappening').velocity("fadeOut", { duration: 200 });
+                $('#main-feed').velocity("fadeOut", { duration: 200 });
+                $('#search-results').velocity("fadeIn", { duration: 500 });
+
                 searchhappening = 1;
 
             } else {
                 $('#searchbutton').removeClass('activated');
                 $('#whatshappening').velocity("fadeIn", { duration: 400 });
                 $('#searchqueryinput').velocity("fadeOut", { duration: 200 });
+                $('#main-feed').velocity("fadeIn", { duration: 1200 });
+                $('#search-results').velocity("fadeOut", { duration: 300 });
 
                 searchhappening = 0;
             }
@@ -401,7 +406,10 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
             // body...
         }
         </script>
-        <div id="main-feed">
+          <div id="search-results" class="panel" style="display: none;opacity: 0">
+              <h3>Search Results</h3>
+          </div>
+        <div id="main-feed" class="panel">
             <div class="update">
                 <h6 class="detail-bar">
 
