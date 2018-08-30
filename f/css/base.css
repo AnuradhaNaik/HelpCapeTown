@@ -408,7 +408,31 @@ button#icon-settings,button#icon-notifications {
 color: grey;border-color: grey;
 }
 
+div#searchprompts {
+    border: 1px solid #36a7e0;
+    position: absolute;
+    width: 57%;
+    min-height: 120px;
+    background: white;
+    margin-top: 40px;display: none;opacity: 0;
+}
+ul#reslist {
+    color: rgb(17, 63, 128);
+    margin-top: 0px;
+}
 
+#reslist li {
+    border-bottom: 1px solid;
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+div#reslist-outer {
+    padding: 6px;display: none;
+}
+div#search-results {
+    margin-top: 200px;
+}
 @media (min-device-width: 320px) and (max-device-width: 780px) {
   
   .dp{
@@ -471,6 +495,8 @@ margin-left: 184px;
     padding: 25px;padding-left: 40px;padding-right: 40px;
   }
 }
+
+
 
     @media screen and (min-device-width: 800px) {
         body {

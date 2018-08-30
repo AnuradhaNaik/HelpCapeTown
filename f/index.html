@@ -366,7 +366,27 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         <div id="highlights">
             <input id="searchqueryinput" type="text" style="
 ">
+<div id="searchprompts">
+  <div id="loaddots" style="
+    /* display: none; */
+    text-align: center;
+"><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Elipsis.gif" style="
+    height: 88px;
+"></div>
+    <div id="reslist-outer">
+        <ul id="reslist">
+            
+    <li style="
+">Result one</li>
+    <li style="
+">Result one</li>
+        </ul>
+    </div>
+</div>
+
+</input>
             <button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
+
             <div id="whatshappening" style="
  
 ">
@@ -390,15 +410,18 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                 $('#whatshappening').velocity("fadeOut", { duration: 200 });
                 $('#main-feed').velocity("fadeOut", { duration: 200 });
                 $('#search-results').velocity("fadeIn", { duration: 500 });
+                $('#searchprompts').velocity("fadeIn", { duration: 700 });
 
                 searchhappening = 1;
 
             } else {
+                 $('#searchprompts').velocity("fadeOut", { duration: 100 });
                 $('#searchbutton').removeClass('activated');
                 $('#whatshappening').velocity("fadeIn", { duration: 400 });
                 $('#searchqueryinput').velocity("fadeOut", { duration: 200 });
                 $('#main-feed').velocity("fadeIn", { duration: 1200 });
                 $('#search-results').velocity("fadeOut", { duration: 300 });
+                
 
                 searchhappening = 0;
             }
