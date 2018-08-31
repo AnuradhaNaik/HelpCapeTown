@@ -365,7 +365,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         </script>
         <div id="highlights">
             <input id="searchqueryinput" type="text" style="
-">
+" onkeyup="searchprompt()">
 <div id="searchprompts">
   <div id="loaddots" style="
     /* display: none; */
@@ -401,6 +401,25 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         <script type="text/javascript">
         var searchhappening = 0;
 
+        var promptshow=0;
+
+         function searchprompt() {
+            var first=0;
+             var f=$('#searchqueryinput').val();
+            if(f.length>4){
+             var lastchar=f.charAt(f.length-1);
+             var secondlastchar=f.charAt(f.length-2);
+             var thirdlastchar=f.charAt(f.length-3);
+              var fourthlastchar=f.charAt(f.length-4);
+                var fifthlastchar=f.charAt(f.length-5);
+
+             if(lastchar=="."&&secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){console.log(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar);}
+            }
+
+              
+             if(promptshow==0)  { $('#searchprompts').velocity("fadeIn", { duration: 700 });promptshow=1;}
+             // body...
+         }
         function search() {
 
             if (searchhappening == 0) {
@@ -410,12 +429,13 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                 $('#whatshappening').velocity("fadeOut", { duration: 200 });
                 $('#main-feed').velocity("fadeOut", { duration: 200 });
                 $('#search-results').velocity("fadeIn", { duration: 500 });
-                $('#searchprompts').velocity("fadeIn", { duration: 700 });
+            
 
                 searchhappening = 1;
 
             } else {
-                 $('#searchprompts').velocity("fadeOut", { duration: 100 });
+
+                     $('#searchprompts').velocity("fadeOut", { duration: 50 });
                 $('#searchbutton').removeClass('activated');
                 $('#whatshappening').velocity("fadeIn", { duration: 400 });
                 $('#searchqueryinput').velocity("fadeOut", { duration: 200 });
@@ -423,7 +443,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
                 $('#search-results').velocity("fadeOut", { duration: 300 });
                 
 
-                searchhappening = 0;
+                searchhappening = 0;promptshow=0;
             }
 
             // body...
