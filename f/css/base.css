@@ -494,9 +494,18 @@ margin-left: 184px;
     font-size: 220%;
     padding: 25px;padding-left: 40px;padding-right: 40px;
   }
+  div#searchprompts {
+   
+    margin-top: 73px;
+}
 }
 
-
+@media (min-width: 320px) and (max-width: 580px){
+div#searchprompts {
+   
+    margin-top: 80px;
+}
+}
 
     @media screen and (min-device-width: 800px) {
         body {

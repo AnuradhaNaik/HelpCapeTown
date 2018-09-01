@@ -365,7 +365,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         </script>
         <div id="highlights">
             <input id="searchqueryinput" type="text" style="
-" onkeyup="searchprompt()">
+" onkeyup="searchprompt(event)" onkeydown="detectscope(event)">
 <div id="searchprompts">
   <div id="loaddots" style="
     /* display: none; */
@@ -400,25 +400,35 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         </div>
         <script type="text/javascript">
         var searchhappening = 0;
-
+       var lastC="";
         var promptshow=0;
+        var scopecount=0;
 
-         function searchprompt() {
+         function searchprompt(ev) {
             var first=0;
              var f=$('#searchqueryinput').val();
             if(f.length>4){
              var lastchar=f.charAt(f.length-1);
+             lastC=lastchar;
              var secondlastchar=f.charAt(f.length-2);
              var thirdlastchar=f.charAt(f.length-3);
-              var fourthlastchar=f.charAt(f.length-4);
-                var fifthlastchar=f.charAt(f.length-5);
+             var fourthlastchar=f.charAt(f.length-4);
+             var fifthlastchar=f.charAt(f.length-5);
 
-             if(lastchar=="."&&secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){console.log(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar);}
+             if(ev.keyCode==190&&secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){scopecount=scopecount+1;console.log(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar+"scope : "+scopecount);}
             }
 
               
              if(promptshow==0)  { $('#searchprompts').velocity("fadeIn", { duration: 700 });promptshow=1;}
              // body...
+         }
+         function detectscope(argument) {
+             var k=argument.keyCode;
+              var f=$('#searchqueryinput').val();
+            if(f.length>1) {lastC=f.charAt(f.length-1);console.log(lastC);}
+             if(lastC=='.'&&k==8){
+                scopecount=scopecount-1;console.log("scope"+scopecount+"\n last:"+lastC);
+             }
          }
         function search() {
 
