@@ -33,7 +33,7 @@
     body>center>ul,
     #highlights ul {
         list-style: none;
-        padding: 7px;
+        padding: 0px;
     }
 
     #add- {
@@ -424,11 +424,15 @@ ul#reslist {
 #reslist li {
     border-bottom: 1px solid;
     margin-top: 19px;
-    margin-bottom: 19px;
+    margin-bottom: 19px;  padding: 17px;
 }
-
+#reslist li.active {
+    color: white;
+    background: #005db1;
+  
+}
 div#reslist-outer {
-    padding: 6px;display: none;
+    padding: 0px;display: none;
 }
 div#search-results {
     margin-top: 200px;
