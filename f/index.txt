@@ -796,7 +796,7 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
         }
         </script>
         <div id="highlights" style="font-size: 177%;">
-            <input id="searchqueryinput" type="text" style="width: 80%; float: left; background: transparent; border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 2px solid; color: white; outline: none; font-size: 100%; display: none; opacity: 0;" class="">
+            <input id="searchqueryinput" autocomplete="off" type="text" style="width: 80%; float: left; background: transparent; border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 2px solid; color: white; outline: none; font-size: 100%; display: none; opacity: 0;" class="">
             <button id="searchbutton" onclick="search()" style="font-size: 110%;padding: 26px;" class=""><span class="icon-search"></span></button>
             <div id="whatshappening" style="opacity: 1; display: block;" class="">
 <center>
