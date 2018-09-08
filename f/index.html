@@ -409,11 +409,12 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
          function searchprompt(ev) {
             var first=0;
              var f=$('#searchqueryinput').val();
-                            autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
+                         
 
             if(f.length>4){
              var lastchar=f.charAt(f.length-1);
              lastC=lastchar;
+                autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
              var secondlastchar=f.charAt(f.length-2);
              var thirdlastchar=f.charAt(f.length-3);
              var fourthlastchar=f.charAt(f.length-4);
@@ -429,6 +430,9 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
              var k=argument.keyCode;
               var f=$('#searchqueryinput').val();
             if(f.length>1) {lastC=f.charAt(f.length-1);console.log(lastC);}
+            if(f.length>3){
+                       autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
+            }
              if(lastC=='.'&&k==8){
                 scopecount=scopecount-1;console.log("scope"+scopecount+"\n last:"+lastC);
              }

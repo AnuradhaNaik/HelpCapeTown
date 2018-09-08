@@ -433,6 +433,9 @@ ul#reslist {
 }
 div#reslist-outer {
     padding: 0px;display: none;
+   
+    max-height: 300px;
+    overflow-y: auto;
 }
 div#search-results {
     margin-top: 200px;
