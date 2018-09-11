@@ -424,12 +424,16 @@ ul#reslist {
 #reslist li {
     border-bottom: 1px solid;
     margin-top: 19px;
-    margin-bottom: 19px;  padding: 17px;
+    margin-bottom: 19px;  padding: 17px;cursor:pointer;
 }
 #reslist li.active {
     color: white;
     background: #005db1;
   
+}
+#reslist li:hover{
+background: navy;
+color: white;
 }
 div#reslist-outer {
     padding: 0px;display: none;

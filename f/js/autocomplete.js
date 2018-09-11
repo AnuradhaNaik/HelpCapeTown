@@ -1,3 +1,5 @@
+var focus='';
+
 function autocomplete(arr,loader,list,valinp) {
 	console.log('autocomplete');
     var val=$(valinp).val();
@@ -10,8 +12,12 @@ function autocomplete(arr,loader,list,valinp) {
         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
          console.log(arr[i]);	$(loader).css('display','none');
          $(list).css('display','block');
-         $(ul).append('<li style="">'+arr[i]+'</li>');
+         $(ul).append('<li onclick="listclick('+arr[i]+')" style="">'+arr[i]+'</li>');
         }
 
     }
+}
+function listclick(argument) {
+focus="c "+argument.toString();
+console.log(focus);
 }
