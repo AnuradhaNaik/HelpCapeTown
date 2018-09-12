@@ -413,7 +413,7 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             var first=0;
              var f=$('#searchqueryinput').val();
                          
-
+            
             if(f.length>4){
              var lastchar=f.charAt(f.length-1);
              lastC=lastchar;
@@ -432,12 +432,16 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
          function detectscope(argument) {
              var k=argument.keyCode;
               var f=$('#searchqueryinput').val();
+              console.log(k);
             if(f.length>1) {lastC=f.charAt(f.length-1);console.log(lastC);}
             if(f.length>3){
                        autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
             }
              if(lastC=='.'&&k==8){
                 scopecount=scopecount-1;console.log("scope"+scopecount+"\n last:"+lastC);
+             }
+             if(k==40){
+               ondown();
              }
          }
         function search() {
