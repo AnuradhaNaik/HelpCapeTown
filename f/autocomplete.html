@@ -78,19 +78,41 @@ input[type=submit] {
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Country">
   </div>
-  <input type="submit">
+  <!-- <input type="submit"> -->
 </form>
 
 <script>
-var scopecount=0;
+var scopecount=0;var inp_val="";
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
+  inp_val=inp.value;
+
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-      /*close any already open lists of autocompleted values*/
+      var a, b, i;
+      inp_val="";
+      
+      var val="";
+      if(scopecount==0) val = this.value;
+      else if(this.value.split('.').length>=2){
+
+            console.log('scope1 ');
+            val=this.value;
+            var already=val.split('.');
+          
+            val =already[already.length-1];
+
+            inp_val=this.value.replace(val,"new");
+
+            var str = this.value; 
+    var res = str.replace(val, "");
+    inp_val=res;
+           
+      }
+  console.log("Inp_val"+inp_val);
+      console.log('current val '+val);
       closeAllLists();
       if (!val) { return false;}
       currentFocus = -1;
@@ -114,7 +136,8 @@ function autocomplete(inp, arr) {
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
-              inp.value = this.getElementsByTagName("input")[0].value;
+              console.log(this.getElementsByTagName("input")[0]);
+              inp.value = inp_val+this.getElementsByTagName("input")[0].value;
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
@@ -144,12 +167,19 @@ function autocomplete(inp, arr) {
              var fourthlastchar=f.charAt(f.length-4);
              var fifthlastchar=f.charAt(f.length-5);
              
-             if(secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){scopecount=scopecount+1;alert(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar+"scope : "+scopecount);}
+             if(secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){
+              scopecount=scopecount+1;
+              console.log("scope : "+scopecount);
+              var all=f.split('.');
+              alert(all);
+
+
+            }
              
             }
 
      
-       alert(e.keyCode+f);
+       
        
        
       }
