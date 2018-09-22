@@ -150,6 +150,7 @@ function autocomplete(inp, arr) {
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
       var x = document.getElementById(this.id + "autocomplete-list");
+      console.log(e.keyCode);
       if (x) x = x.getElementsByTagName("div");
      
       if (e.keyCode == 40) {
@@ -158,6 +159,12 @@ function autocomplete(inp, arr) {
         currentFocus++;
         /*and and make the current item more visible:*/
         addActive(x);
+      }
+      else if(e.keyCode==8){
+         var f = this.value;
+            var lastchar=f.charAt(f.length-1);
+            if(lastchar=='.') scopecount--;
+            console.log('scopecount'+scopecount);
       }
       else if(e.keyCode==190){
        var f = this.value;
