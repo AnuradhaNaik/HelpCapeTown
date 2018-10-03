@@ -3,13 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font: 16px Arial;  
-}
 
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -17,19 +11,19 @@ body {
   display: inline-block;
 }
 
-input {
+input#myInput {
   border: 1px solid transparent;
-  background-color: #f1f1f1;
+  background-color: #fff;
   padding: 10px;
   font-size: 16px;
 }
 
-input[type=text] {
-  background-color: #f1f1f1;
+input[type=text]#myInput {
+  background-color: #fff;
   width: 100%;
 }
 
-input[type=submit] {
+input[type=submit]#myInput {
   background-color: DodgerBlue;
   color: #fff;
   cursor: pointer;
@@ -64,6 +58,8 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+
+
 </style>
 </head>     
 
@@ -74,7 +70,7 @@ input[type=submit] {
 <p>Start typing:</p>
 
 <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" action="/action_page.php">
+<form autocomplete="off" >
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Country">
   </div>
@@ -82,6 +78,7 @@ input[type=submit] {
 </form>
 
 <script>
+
 var scopecount=0;var inp_val="";
 function autocomplete(inp) {
   var arr=countries;
@@ -89,7 +86,6 @@ function autocomplete(inp) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   inp_val=inp.value;
-
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
       var a, b, i;
@@ -195,7 +191,10 @@ function autocomplete(inp) {
             }
 
      
-       
+       else{
+
+         
+       }
        
        
       }

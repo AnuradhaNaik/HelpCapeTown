@@ -366,28 +366,93 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
             }
         }
         </script>
-        <div id="highlights">
-            <input id="searchqueryinput" type="text" style="
-" onkeyup="searchprompt(event)" onkeydown="detectscope(event)">
-<div id="searchprompts">
-  <div id="loaddots" style="
-    /* display: none; */
-    text-align: center;
-"><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Elipsis.gif" style="
-    height: 88px;
-"></div>
-    <div id="reslist-outer">
-        <ul id="reslist">
-            
-    <li style="
-">Result one</li>
-    <li style="
-">Result one</li>
-        </ul>
-    </div>
-</div>
 
-</input>
+        <style type="text/css">
+            
+
+
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input#myInput {
+  border: 1px solid transparent;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text]#myInput {
+  background-color: #fff;
+  width: 100%;
+      border-radius: 7px;
+    font-size: 15pt;
+    outline: none;
+}
+
+input[type=submit]#myInput {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;color: black;
+}
+
+.autocomplete-items div {
+  padding: 20px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+#searchqueryinput2{
+    display: none;
+}
+#searchqueryinput2.show{
+    display: inline-block;
+}
+
+
+
+
+
+        </style>
+        <div id="highlights">
+          
+
+          <form style="width: 70%;
+   " autocomplete="off" action="/action_page.php" id="searchqueryinput2">
+  <div class="autocomplete" style="width:100%;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Enter Search Term">
+  </div>
+  <!-- <input type="submit"> -->
+</form>
+
+
+
             <button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
 
             <div id="whatshappening" style="
@@ -402,6 +467,9 @@ $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
             </div>
         </div>
         <script src="js/autocomplete.js"></script>
+        <script type="text/javascript">
+            autocomplete(document.getElementById("myInput"));
+        </script>
         <script type="text/javascript">
         var searchhappening = 0;
        var lastC="";
@@ -449,10 +517,10 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
             if (searchhappening == 0) {
                 $('#searchbutton').addClass('activated');
 
-                $('#searchqueryinput').velocity("fadeIn", { duration: 400 });
+                $('#searchqueryinput2').addClass("show");
                 $('#whatshappening').velocity("fadeOut", { duration: 200 });
                 $('#main-feed').velocity("fadeOut", { duration: 200 });
-                $('#search-results').velocity("fadeIn", { duration: 500 });
+                //$('#search-results').velocity("fadeIn", { duration: 500 });
             
 
                 searchhappening = 1;
@@ -462,9 +530,9 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
                      $('#searchprompts').velocity("fadeOut", { duration: 50 });
                 $('#searchbutton').removeClass('activated');
                 $('#whatshappening').velocity("fadeIn", { duration: 400 });
-                $('#searchqueryinput').velocity("fadeOut", { duration: 200 });
+                $('#searchqueryinput2').removeClass("show");
                 $('#main-feed').velocity("fadeIn", { duration: 1200 });
-                $('#search-results').velocity("fadeOut", { duration: 300 });
+                //$('#search-results').velocity("fadeOut", { duration: 300 });
                 
 
                 searchhappening = 0;promptshow=0;
@@ -472,9 +540,59 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
             // body...
         }
+        function updatelist(argument) {
+
+            $('#search_res').html('');
+            if(argument==0){
+                 $('#search_res').append('<li >@SearchRes <a></a></li>');
+
+                     
+                      
+            }
+            else if(argument==1){
+                $('#search_res').append(' <li>#SearchRes  <a></a></li>');
+                
+            }
+            else if (argument==2){
+                   $('#search_res').append('<li class="nonexpandable">Search Res Li <a></a></li>');
+            }
+            // body...
+        }
         </script>
+        <style type="text/css">
+            .search_res {
+    padding-right: 20px;
+
+}
+            .search_res li {
+    margin: 9%;
+    margin-top: 30px;
+   
+    text-align: left;
+}
+ .search_res li a{
+    float: right;cursor: pointer;
+
+ }
+ .search_res li a:before{
+    content: ".....................";
+
+ }
+  .search_res li.nonexpandable a{
+display: none;
+  }
+        </style>
           <div id="search-results" class="panel" style="display: none;opacity: 0">
               <h3>Search Results</h3>
+              <div style="margin:4%;margin-top: 150px">
+                  <ol class="search_res" style="list-style: none;" id="search_res">
+                      <li >@SearchRes <a></a></li>
+                      <li>#SearchRes  <a></a></li>
+                      <li class="nonexpandable">Search Res Li <a></a></li>
+
+
+                  </ol>
+              </div>
           </div>
         <div id="main-feed" class="panel">
             <div class="update">
