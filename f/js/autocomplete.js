@@ -69,7 +69,7 @@ var blink=document.getElementById('blinking');
       var x = document.getElementById(this.id + "autocomplete-list");
       console.log(e.keyCode);
       if (x) x = x.getElementsByTagName("div");
-     
+      updatelist(scopecount);
       if (e.keyCode == 40) {
         /*If the arrow DOWN key is pressed,
         increase the currentFocus variable:*/
@@ -82,7 +82,7 @@ var blink=document.getElementById('blinking');
             var lastchar=f.charAt(f.length-1);
             if(lastchar=='.') scopecount--;
                arr=setArr(scopecount);
-
+  //updatelist(scopecount);
             console.log('scopecount'+scopecount);
       }
       else if(e.keyCode==190){
@@ -99,7 +99,7 @@ var blink=document.getElementById('blinking');
 
                     console.log("scope : "+scopecount);
                arr=setArr(scopecount);
-               updatelist(scopecount);
+            //   updatelist(scopecount);
                     alert(arr);
 
 
@@ -182,7 +182,7 @@ function setArr(argument) {
   function updatelist(argument) {
 
             $('#search_res').html('');
-            $('#search-results').velocity("fadeOut", { duration: 500 });
+            $('#search-results').velocity("fadeOut", { duration: 100 });
             
             if(argument==0){
                  $('#search_res').append('<li >@SearchRes <a></a></li>');
@@ -197,7 +197,7 @@ function setArr(argument) {
             else if (argument==2){
                    $('#search_res').append('<li class="nonexpandable">Search Res Li <a></a></li>');
             }
-            $('#search-results').velocity("fadeIn", { duration: 500 });
+            $('#search-results').velocity("fadeIn", { duration: 100 });
             
             // body...
         }

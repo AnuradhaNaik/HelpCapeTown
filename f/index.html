@@ -540,24 +540,7 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
 
             // body...
         }
-        function updatelist(argument) {
-
-            $('#search_res').html('');
-            if(argument==0){
-                 $('#search_res').append('<li >@SearchRes <a></a></li>');
-
-                     
-                      
-            }
-            else if(argument==1){
-                $('#search_res').append(' <li>#SearchRes  <a></a></li>');
-                
-            }
-            else if (argument==2){
-                   $('#search_res').append('<li class="nonexpandable">Search Res Li <a></a></li>');
-            }
-            // body...
-        }
+      
         </script>
         <style type="text/css">
             .search_res {
@@ -570,15 +553,15 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
    
     text-align: left;
 }
- .search_res li a{
+ .search_res li a.more{
     float: right;cursor: pointer;
 
  }
- .search_res li a:before{
+ .search_res li a.more:before{
     content: ".....................";
 
  }
-  .search_res li.nonexpandable a{
+  .search_res li.nonexpandable a.more{
 display: none;
   }
         </style>
@@ -586,9 +569,9 @@ display: none;
               <h3>Search Results</h3>
               <div style="margin:4%;margin-top: 150px">
                   <ol class="search_res" style="list-style: none;" id="search_res">
-                      <li >@SearchRes <a></a></li>
-                      <li>#SearchRes  <a></a></li>
-                      <li class="nonexpandable">Search Res Li <a></a></li>
+                      <li >@SearchRes <a class="more"></a></li>
+                      <li>#SearchRes  <a class="more"></a></li>
+                      <li class="nonexpandable">Search Res Li <a class="more"></a></li>
 
 
                   </ol>
