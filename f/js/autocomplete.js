@@ -185,17 +185,17 @@ function setArr(argument) {
             $('#search-results').velocity("fadeOut", { duration: 100 });
             
             if(argument==0){
-                 $('#search_res').append('<li >@SearchRes <a class="more"></a></li>');
+                 $('#search_res').append('<li >@SearchRes <a class="add"></a><a class="more"></a></li>');
                
                      
                       
             }
             else if(argument==1){
-                $('#search_res').append(' <li>#SearchRes  <a class="more"></a></li>');
+                $('#search_res').append(' <li>#SearchRes <a class="add"></a> <a class="more"></a></li>');
                 
             }
             else if (argument==2){
-                   $('#search_res').append('<li class="nonexpandable">Search Res Li <a class="more"></a></li>');
+                   $('#search_res').append('<li class="nonexpandable">Search Res Li <a class="add"></a><a class="more"></a></li>');
             }
             $('#search-results').velocity("fadeIn", { duration: 100 });
             

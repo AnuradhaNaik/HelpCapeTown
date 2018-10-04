@@ -557,6 +557,17 @@ var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla"
     float: right;cursor: pointer;
 
  }
+ #search-results a.add:before{
+content: "+";
+ }
+ #search-results a.add {
+    padding: 4px;float:right;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+    padding-left: 13px;
+    padding-right: 13px;font-size: medium;
+    padding-top: 0px;cursor: pointer;margin-left: 7px;opacity: 0.9;
+}
  .search_res li a.more:before{
     content: ".....................";
 
@@ -566,7 +577,7 @@ display: none;
   }
         </style>
           <div id="search-results" class="panel" style="display: none;opacity: 0">
-              <h3>Search Results</h3>
+              <h3>Search Results<a class="add"></a></h3>
               <div style="margin:4%;margin-top: 150px">
                   <ol class="search_res" style="list-style: none;" id="search_res">
                       <li >@SearchRes <a class="more"></a></li>
