@@ -185,17 +185,17 @@ function setArr(argument) {
             $('#search-results').velocity("fadeOut", { duration: 100 });
             
             if(argument==0){
-                 $('#search_res').append('<li >@SearchRes<a class="more"></a><a class="share"><small><span class="icon-share"></span></small></a> <a class="add"></a></li>');
+                 $('#search_res').append('<li ><span class="search_res_text">@SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a class="add"></a></li>');
                
                      
                       
             }
             else if(argument==1){
-                $('#search_res').append(' <li>#SearchRes<a class="more"></a><a class="share"><small><span class="icon-share"></span></small></a> <a class="add"></a> </li>');
+                $('#search_res').append(' <li><span class="search_res_text">#SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a class="share"><small><span class="icon-share"></span></small></a> <a class="add"></a> </li>');
                 
             }
             else if (argument==2){
-                   $('#search_res').append('<li class="nonexpandable">Search Res Li <a class="share"><small><span class="icon-share"></span></small></a><a class="add"></a><a class="more"></a></li>');
+                   $('#search_res').append('<li class="nonexpandable"><span class="search_res_text">Search Res Li </span><a class="share"><small><span class="icon-share"></span></small></a><a class="add"></a><a class="more"></a></li>');
             }
             $('#search-results').velocity("fadeIn", { duration: 100 });
             
@@ -206,3 +206,14 @@ function setArr(argument) {
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 //autocomplete(document.getElementById("myInput"));
 
+function addsearchresult(argument) {
+  // body...
+}
+function sharesearchresult(argument) {
+  // body...
+}
+function moresearchresult(a) {
+  // body...
+  var o=$(a);
+  alert(o);
+}
