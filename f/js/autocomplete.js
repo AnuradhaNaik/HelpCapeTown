@@ -1,10 +1,10 @@
-var scopecount=0;var inp_val="";
+var scopecount=0;var inp_val="";var v="";
 function autocomplete(inp) {
   var arr=countries;
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
-  inp_val=inp.value;
+  inp_val=inp.value;v=inp;
 var blink=document.getElementById('blinking');
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
@@ -12,7 +12,7 @@ var blink=document.getElementById('blinking');
       inp_val="";
       
       var val="";
-      if(scopecount==0) val = this.value;
+      if(scopecount==0){ val = this.value;}
       else if(this.value.split('.').length>=2){
 
             console.log('scope1 ');
@@ -170,11 +170,13 @@ var blink=document.getElementById('blinking');
 var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 var cs = ["AAAAAAAAAAA","BBBBBBBBBBBBBBBB","CCCCCCCCCCCCCCCCCC","DDDDDDDDDDDDDDDDDDDDDd","EEEEEEEEEEEEE","FFFFFFFFFFFF","GGGGGGGGGGGGG","HHHHHHHHHHHHHHHHHHH","IIIIIIIIIIII","JJJJJJJJJJJJJJ","KKKKKKKKKKKK","LLLLLLLLLLL","MMMMMMMMMMMM","NNNNNNNNN","OOOOOOOOOO","PPPPPPPP","QQQQQQ","RRRRRRRRR","SSSSSSSSSsS"];
 var cbs = ["111111111","22222222222222","33333333333","44444444","55555555555555555","666666666666666","77777777777","8888888888888888","9999999999999","11000000","10111111111111101","12222211112","1311333331111","141114","15555515","166661666666","1777777777717","1118888818","11111111999999","22200002220020"];
-function setArr(argument) {
+var countriesa = ["@Afghanistan","@Albania","@Algeria","@Andorra","@Angola","@Anguilla","@Antigua & Barbuda"]
 
-  if(argument==1)return cs;
- 
+function setArr(argument) {
+ console.log($(v).val().charAt(0)+"*************");
+  if(argument==1 )return cs;
   else if(argument==2)return cbs;
+  else if($(v).val().charAt(0)=='@') return countriesa; 
   else return countries;
   // body...
 }
@@ -184,8 +186,14 @@ function setArr(argument) {
             $('#search_res').html('');
             $('#search-results').velocity("fadeOut", { duration: 100 });
             
-            if(argument==0){
+            if(argument==0&&$(v).val().charAt(0)=='@'){
                  $('#search_res').append('<li ><span class="search_res_text">@SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
+               
+                     
+                      
+            }
+             else if(argument==0){
+                 $('#search_res').append('<li ><span class="search_res_text">SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
                
                      
                       
