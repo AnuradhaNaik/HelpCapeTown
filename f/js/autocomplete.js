@@ -220,6 +220,9 @@ function moresearchresult(a) {
   var o=$(a);
   var p=$(o).parent();
   var f=$(p).find('.search_res_text');
-  alert($(f).html());
-  window.location.href="person.html";
+  var h=$(f).html();
+   
+  var g=h.charAt(0);
+  if(g=='@'){alert($(f).html());
+  window.location.href="person.html";}
 }
