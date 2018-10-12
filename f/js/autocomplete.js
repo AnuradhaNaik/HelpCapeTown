@@ -217,6 +217,7 @@ function setArr(argument) {
 function addsearchresult(a) {
   //var o=$(a);
   alert('add result');
+  $(a).toggleClass('added');
 }
 function sharesearchresult(a) {
   var o=$(a);
