@@ -1,7 +1,9 @@
 var scopecount = 0;
 var inp_val = "";
 var v = "";
-
+function compilesearchresults(term){
+              return 0;
+            }
 function autocomplete(inp) {
     var arr = countries;
     /*the autocomplete function takes two arguments,
@@ -182,7 +184,7 @@ var countriesh = ["#Afghanistan", "#Albania", "#Algeria", "#Andorra", "#Angola",
 function setArr(argument, V) {
     console.log('current val ' + V);
 
-    if (V.charAt(0) == '@') return countriesa;
+    if (V.charAt(0) == '@'&&argument == 0) return countriesa;
     if (V.charAt(0) == '#') return countriesh;
     else if (argument == 1) return cs;
     else if (argument == 2) return cbs;

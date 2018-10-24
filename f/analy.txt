@@ -1,0 +1,28 @@
+highlights fetch
+search autocomplete
+Show result
+Update:add to saved
+
+get/refresh feed:
+	fetch post 
+	fetch post attributes
+        optimize feed
+	media optimize
+add stuff
+
+-------------------------------
+fetch person: name pic motivation ....all of it
+edit
+get followerlist/followinglist
+get saved feed: posts+pattr
+------------------------------------
+fill all notifactions
+get with posts: who+post:
+	get milestone
+	get question
+	get add tos
+
+get more 'who'+rel:
+	follow 
+	like 
+	pin
