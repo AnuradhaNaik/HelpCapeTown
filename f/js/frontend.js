@@ -1,12 +1,26 @@
+ function getjson(argument) {
+   // body...
+    var result='{}';
+               // body...
+               return result;
+ }
+  function putjson(jsonargument) {
+   // body...
+    
+               // body...
+               return 0;
+ }
+
  function fetchhighlights(argument) {
-              // body...
+              // //getjson
             }
             function resultforautocomple(argument){
               var arr=[];
               return arr;
+              //getjson
             }
             
-            function savepost(post){
+            function savepost(post){//putjson
               return 0;
             }
                function verifypost(post){
@@ -16,84 +30,84 @@
               return 0;
             }
             function fetchfeed(){
-              return 0;
+              return 0;//getjson
             }
-            function fetchApost(){
+            function fetchApost(){//getjson
               return 0;
             }
             function post(argument) {
-              // body...
+              //getjson
               return 0;
             }
 function getperson(argument) {
             var result='{}';
-               // body...
+               //getjson
                return result;
            }
            function getfollowers(argument) {
             var result='{}';
-               // body...
+               //getjson
                return result;
            }
            function getfollowing(argument) {
             var result='{}';
-               // body...
+               //getjson
                return result;
            }
            
 
            function editprofile(argument) {
-               // body...
+               //put json
                return 0;
            }
            function fetchsavedfeed(){
+            //getjson
               return 0;
             }
-              function getmilestone(argument) {
+              function getmilestone(argument) {//getjson
                    var result='{}';
-               // body...
+               
                return result;
-        // body...
+      
     }
-    function getaddto(argument) {
+    function getaddto(argument) {//getjson
          var result='{}';
-               // body...
+           
                return result;
-        // body...
-    }
-    function getquestion(argument) {
+          }
+    function getquestion(argument) {//getjson
          var result='{}';
-               // body...
+             
                return result;
-        // body...
+       
     }
-    function getonemore(argument) {
+    function getonemore(argument) {//getjson
          var result='{}';
-               // body...
+              
                return result;
-        // body...
+       
     }
-    function getmorefeed(argument) {
+    function getmorefeed(argument) {//getjson
        var result='{}';
-               // body...
+              
                return result;
-        // body...
+        
     }
-    function getmilestonefeed(argument) {
+    function getmilestonefeed(argument) {//getjson
        var result='{}';
-               // body...
+               
                return result;
-        // body...
+        
     }
-    function getaddtofeed(argument) {
+    function getaddtofeed(argument) {//getjson
        var result='{}';
-               // body...
+            
                return result;
-        // body...
+       
     }
-    function getquestionfeed(argument) {
+    function getquestionfeed(argument) {//getjson
       var result='{}';
-               // body...
+           
                return result;
-        // body...
+       
     }
