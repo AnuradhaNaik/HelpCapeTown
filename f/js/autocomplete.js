@@ -1,9 +1,11 @@
 var scopecount = 0;
 var inp_val = "";
 var v = "";
-function compilesearchresults(term){
-              return 0;
-            }
+
+function compilesearchresults(term) {
+    return 0;
+}
+
 function autocomplete(inp) {
     var arr = countries;
     /*the autocomplete function takes two arguments,
@@ -14,7 +16,7 @@ function autocomplete(inp) {
     var blink = document.getElementById('blinking');
     var val = "";
     /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
+    inp.addEventListener("input", function (e) {
         var a, b, i;
         inp_val = "";
 
@@ -23,7 +25,7 @@ function autocomplete(inp) {
             val = this.value;
         } else if (this.value.split('.').length >= 2) {
 
-            
+
             val = this.value;
             var already = val.split('.');
 
@@ -61,7 +63,7 @@ function autocomplete(inp) {
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
-                b.addEventListener("click", function(e) {
+                b.addEventListener("click", function (e) {
                     /*insert the value for the autocomplete text field:*/
                     console.log("Adding.................." + inp.value + ".");
                     if (scopecount == 0) inp.value = inp_val + this.getElementsByTagName("input")[0].value;
@@ -75,7 +77,7 @@ function autocomplete(inp) {
         }
     });
     /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
+    inp.addEventListener("keydown", function (e) {
         var x = document.getElementById(this.id + "autocomplete-list");
         console.log(e.keyCode);
         if (x) x = x.getElementsByTagName("div");
@@ -113,8 +115,6 @@ function autocomplete(inp) {
 
 
                 }
-
-
 
 
             } else {
@@ -168,7 +168,7 @@ function autocomplete(inp) {
         }
     }
     /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
 }
@@ -184,7 +184,7 @@ var countriesh = ["#Afghanistan", "#Albania", "#Algeria", "#Andorra", "#Angola",
 function setArr(argument, V) {
     console.log('current val ' + V);
 
-    if (V.charAt(0) == '@'&&argument == 0) return countriesa;
+    if (V.charAt(0) == '@' && argument == 0) return countriesa;
     if (V.charAt(0) == '#') return countriesh;
     else if (argument == 1) return cs;
     else if (argument == 2) return cbs;
@@ -204,15 +204,12 @@ function updatelist(argument) {
         $('#search_res').append('<li ><span class="search_res_text">@SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
 
 
-
     } else if (argument == 0 && $(v).val().charAt(0) == '#') {
         $('#search_res').append('<li  class="nonexpandable" ><span class="search_res_text">#SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
 
 
-
     } else if (argument == 0) {
         $('#search_res').append('<li class="nonexpandable" ><span class="search_res_text">SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
-
 
 
     } else if (argument == 1) {
