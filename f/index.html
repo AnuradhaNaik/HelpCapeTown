@@ -1,1593 +1,1121 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Help Cape Town</title>
-    <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
-    <link href="ico.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css">
-   
-</head>
-
-<body> <script src="js/frontend.js"></script>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/velocity.js"></script>
-    <script type="text/javascript">
-        function openreply(){
-   $('#reply-div').velocity('fadeIn',{ 
-    duration: 35});
-        }
-        function openmore() {
-               $('#more-div').velocity('fadeIn' ,{ 
-    duration: 35});
-        }
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-        
-    
-
-        $('.action-bar button ').click(function () {
-           $(this).parent().toggleClass('selected');
-        });
-
- $('.action-bar button.replybutton ').click(function () {
-          openreply();
-        });
- $('.action-bar button.morebutton ').click(function () {
-           openmore();
-        });
-        $('ul.poll_options li').click(function(){
-            $(this).parent().addClass('polldone');/*
-
-calc( 100% - 60px )
-            */
-
-        });
-
-       
-        });
-
-
-    </script>
-    <!-- Add something to feed -->
-
-  <div style="
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 100%;
-    z-index: 500;
-    top: 0px;
-    padding: 20px;text-align: center;display: none;
-" id="share-div">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Share</h2>
-        <center>
-         <ul id="share-items">
-           
-            <li>Twitter</li>
-            <li>Facebook</li>
-        </ul>
-        </center>
-        </div>
-
-  <div style="
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 100%;
-    z-index: 500;
-    top: 0px;
-    padding: 20px;text-align: center;display: none;
-" id="reply-div">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Respond</h2>
-        <center>
-        <ul id="respond-items">
-            <li>Add To</li>
-            <li>Question</li>
-            
-        </ul>
-        </center>
-        </div>
-
-        <div style="
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 100%;
-    z-index: 500;
-    top: 0px;
-    padding: 20px;text-align: center;display: none;
-" id="more-div">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">More</h2>
-        <center>
-       <ul id="more-items">
-
-            <li>Reference</li>
-            <li>Pin</li>
-            <li style="color: #ef0a0a;
-    border: 1px solid;">Report</li>
-            <li style="
-        color: white;
-    border: 1px solid #24aafd;
-    background: #24aafd;
-">Share on Twitter</li>
-            <li style="
-      color: white;
-    border: 1px solid #4267b2;
-    background: #4267b2
-">Share on Facebook</li>
-        </ul>
-        </center>
-        </div>
-
-        <div style="
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 100%;
-    z-index: 500;
-    top: 0px;
-    padding: 20px;text-align: center;display: none;
-" id="ref-div">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Reference</h2>
-        <center>
-
-        </center>
-        </div>
-        
-    <div style="
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 100%;
-    z-index: 500;
-    top: 0px;
-    padding: 20px;text-align: center;display: none;
-" id="add-div">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Add to Feed</h2>
-        <center>
+   <head>
+      <title>Help Cape Town</title>
+      <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
+      <link href="css/ico.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/base.css">
+   </head>
+   <body>
+      <script src="js/frontend.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/velocity.js"></script>
+      <script type="text/javascript">
+         function openreply(){
+         $('#reply-div').velocity('fadeIn',{ 
+         duration: 35});
+         }
+         function openmore() {
+                $('#more-div').velocity('fadeIn' ,{ 
+         duration: 35});
+         }
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+         
+         
+         
+         $('.action-bar button ').click(function () {
+            $(this).parent().toggleClass('selected');
+         });
+         
+         $('.action-bar button.replybutton ').click(function () {
+           openreply();
+         });
+         $('.action-bar button.morebutton ').click(function () {
+            openmore();
+         });
+         $('ul.poll_options li').click(function(){
+             $(this).parent().addClass('polldone');/*
+         
+         calc( 100% - 60px )
+             */
+         
+         });
+         
+         
+         });
+         
+         
+      </script>
+      <!-- Add something to feed -->
+      <div style="
+         position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+         " id="share-div">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Share</h2>
+         <center>
+            <ul id="share-items">
+               <li>Twitter</li>
+               <li>Facebook</li>
+            </ul>
+         </center>
+      </div>
+      <div style="
+         position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+         " id="reply-div">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Respond</h2>
+         <center>
+            <ul id="respond-items">
+               <li>Add To</li>
+               <li>Question</li>
+            </ul>
+         </center>
+      </div>
+      <div style="
+         position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+         " id="more-div">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">More</h2>
+         <center>
+            <ul id="more-items">
+               <li>Reference</li>
+               <li>Pin</li>
+               <li style="color: #ef0a0a;
+                  border: 1px solid;">Report</li>
+               <li style="
+                  color: white;
+                  border: 1px solid #24aafd;
+                  background: #24aafd;
+                  ">Share on Twitter</li>
+               <li style="
+                  color: white;
+                  border: 1px solid #4267b2;
+                  background: #4267b2
+                  ">Share on Facebook</li>
+            </ul>
+         </center>
+      </div>
+      <div style="
+         position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+         " id="ref-div">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Reference</h2>
+         <center>
+         </center>
+      </div>
+      <div style="
+         position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+         " id="add-div">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Add to Feed</h2>
+         <center>
             <ul id="add_items">
-                <li onclick="addtofeed('u')">Update</li>
+               <li onclick="addtofeed('u')">Update</li>
                <!--  <li onclick="addtofeed()">Helpful Link</li> -->
-                <li onclick="addtofeed('o')">Objective</li>
-                <li onclick="addtofeed('m')">Milestone</li>
-                <li onclick="addtofeed('e')">Event</li>
-                <!-- <li onclick="addtofeed('q')">Question  --><!-- poll included in this --></li>
-
+               <li onclick="addtofeed('o')">Objective</li>
+               <li onclick="addtofeed('m')">Milestone</li>
+               <li onclick="addtofeed('e')">Event</li>
+               <!-- <li onclick="addtofeed('q')">Question  --><!-- poll included in this --></li>
                <!--  <li onclick="addtofeed('c')">CTA</li> -->
             </ul>
-        </center>
-
-        <center id="add_inp" style="display: none;" class="form">
-        <div class="floating-button" style="
-   box-shadow: none;
-    position: absolute;
-    bottom: 88%;
-    left: 35px;
-    color: rgb(89, 135, 216);
-    border: 2px solid;
-    background: transparent;
-    display: inline-block;
-    width: 20px;
-    line-height: 1.5;
-    padding-top: 1px;
-    font-size: xx-large;
-" onclick="go_back()"> &lt; </div>
+         </center>
+         <center id="add_inp" style="display: none;" class="form">
+            <div class="floating-button" style="
+               box-shadow: none;
+               position: absolute;
+               bottom: 88%;
+               left: 35px;
+               color: rgb(89, 135, 216);
+               border: 2px solid;
+               background: transparent;
+               display: inline-block;
+               width: 20px;
+               line-height: 1.5;
+               padding-top: 1px;
+               font-size: xx-large;
+               " onclick="go_back()"> &lt; </div>
             <input id="inp-title" class="add_inp update_inp obj_inp event_inp milestone_inp" placeholder="Title">
             <input class="add_inp  question_inp" type="" name="" placeholder="Question">
             <input class="add_inp milestone_inp" placeholder="Ref">
             <input class="add_inp cta_inp" placeholder="CTA ref">
-         <br>   <input class="add_inp event_inp" type="date" name="" style="
-    display: inline-flex;
-    width: 20%;
-    margin-left: 14px;
-    /* margin-right: 9px; */
-    ">
+            <br>   <input class="add_inp event_inp" type="date" name="" style="
+               display: inline-flex;
+               width: 20%;
+               margin-left: 14px;
+               /* margin-right: 9px; */
+               ">
             <input class="add_inp event_inp" type="time" name="" style="
-    display: inline-flex;
-    width: 20%;
-    margin-left: 9px;
-    margin-right: 9px;
-    ">
-       <br>     <input class="add_inp event_inp" type="" name="place" placeholder="place" style="
-    display: inline-flex;
-    width: 20%;
-    margin-left: 9px;
-    "><br>
+               display: inline-flex;
+               width: 20%;
+               margin-left: 9px;
+               margin-right: 9px;
+               ">
+            <br>     <input class="add_inp event_inp" type="" name="place" placeholder="place" style="
+               display: inline-flex;
+               width: 20%;
+               margin-left: 9px;
+               "><br>
             <input class="add_inp event_inp" type="" name="" placeholder="rsvp link">
-         <div id="inp-content" class="add_inp update_inp event_inp obj_inp" type="" placeholder="Content (200 characters max)" style="min-height: 90px;/* display: inline-block; */text-align: left;font-size: medium;outline: none;padding: 8px;line-height: 1.6;font-family: Palanquin, sans-serif;margin-left: 0px;opacity: 1;width: 70%;border: 1px solid rgba(128, 128, 128, 0.72);max-height: 300px;" contenteditable="true"></div>
-
-
+            <div id="inp-content" class="add_inp update_inp event_inp obj_inp" type="" placeholder="Content (200 characters max)" style="min-height: 90px;/* display: inline-block; */text-align: left;font-size: medium;outline: none;padding: 8px;line-height: 1.6;font-family: Palanquin, sans-serif;margin-left: 0px;opacity: 1;width: 70%;border: 1px solid rgba(128, 128, 128, 0.72);max-height: 300px;" contenteditable="true"></div>
             <input class="add_inp obj_inp  milestone_inp" type="file" style="
-    padding-left: 0px;
-    margin-left: 0px;
-">
+               padding-left: 0px;
+               margin-left: 0px;
+               ">
             <input  type="submit" value="Go" style="
-    width: 26%;
-    background: transparent;
-    border: 1px solid navy;
-    cursor: pointer;
-    /* padding: 10px; */
-   
-    border-radius: 8px;
-    font-size: larger;
-    background: #2d61bd;
-    color: white;
-    margin: 40px;
-" onclick="addcontenttofeed()">
-<script type="text/javascript">
-   function addcontenttofeed(){
-    var title=$('#inp-title').val();
-    var c_ =$('#inp-content').html();
-var up_str='<div class="update"> <h6 class="detail-bar">  </h6> <h3>'+title+'</h3> <section style="text-align: left;font-size: large; */">'+c_+'</section> <section style=" padding: 19px; /* text-align: left; */ "> </section> <section class="action-bar"> <section> <button style=" /* float: right; */ "><span class="icon-star"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-reply"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-share"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-heart"></span></button> <br> <span><small></small></span> </section> </section> </div>';
- $(up_str).insertAfter('#feed-title');
-
-
-
-
-
-
-
- $('#addtofeed').removeClass('close');
-
-                $('#add-div').velocity("fadeOut",
-  { 
-    duration: 500,
-    complete: function() { 
-       $('#add_items').css('display','block');$('#add_items').css('opacity','1');
-$('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
-
-
-    }
-  });
-                open = 0;
-
-
-
-
-
-
-
-   } 
-</script>
-        </center>
-    </div>
-    <script type="text/javascript">
-
-    var add_item = 0;
-            function addtofeed(a)
-            {
-                 $('#add_items').velocity("fadeOut", { duration: 400 });
-                 fadeallelements();
-                 switch(a) {
-    case 'u': $('.add_inp.update_inp').velocity('fadeIn');break;
-    // case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
-    //  case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
-    //   case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
-    //   case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
-    //   case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
-                            }
-            }
-            function fadeallelements(){
-                $('#add_inp').velocity('fadeIn');
-                $('.add_inp').velocity("fadeOut");
-
-            }
-             function go_back(){
-                console.log('goback');
-                 $('#add_inp').velocity('fadeOut');
-                $('.add_inp').velocity("fadeOut");   $('#add_items').velocity("fadeIn", { duration: 600 });
-             }
-    </script>
-    <!-- End of Add Div -->
-    <button class="barbutton" style="
- 
-    " onclick="location.href='person.html'"><span class="icon-person"></span>
-        <span class="badge-main" style="
-    font-size: small;
-    background: orange;
-    padding: 9px;
-    padding-top: 6px;
-    border-radius: 50%;
-    padding-bottom: 5px;
-    position: absolute;
-    border: 1px solid white;
-    color: white;
-    top: -10px;
-    display: none;
-">20</span>
-    </button>
-   <button class="barbutton" style="
-   
-   
-    " id="icon-settings" onclick="location.href='notifications.html'"><span class="icon-notifications"></span>
-        <span class="badge-main" style="
-    font-size: small;
-    background: orange;
-    padding: 9px;
-    padding-top: 6px;
-    border-radius: 50%;
-    padding-bottom: 5px;
-    position: absolute;
-    border: 1px solid white;
-    color: white;
-    top: -10px;
-    display: none;
-">20</span>
-    </button>
-    <button class="barbutton" style="
-
-    margin-left: 200px;
-    display: none;
-    "><span class="icon-refresh"></span>
-        <span class="badge-main" style="
-    font-size: small;
-    background: orange;
-    padding: 9px;
-    padding-top: 6px;
-    border-radius: 50%;
-    padding-bottom: 5px;
-    position: absolute;
-    border: 1px solid white;
-    color: white;
-    top: -10px;
-    display: none;
-
-">20</span>
-    </button>
-    <center>
-
-        <header>
-            <h1  id="maintitle">#HelpCapeTown</h1>
-            <h4 id="mainsubtitle">Let's come together to help Cape Town achieve water stabilty</h4></header>
-        <button id="addtofeed" class="floating-button" onclick="addsomethingtofeed()">+</button>
-        <script type="text/javascript">
-        var open = 0;
-
-        function addsomethingtofeed() {
-            // body...
-            if (open == 0) { $('#addtofeed').addClass('close');
-                $('#add-div').velocity("fadeIn", { duration: 200 });
-                open = 1; } else {
-                $('#addtofeed').removeClass('close');
-
-                $('#add-div').velocity("fadeOut",
-  { 
-    duration: 500,
-    complete: function() { 
-       $('#add_items').css('display','block');$('#add_items').css('opacity','1');
-$('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
-
-
-    }
-  });
-                open = 0;
-            }
-        }
-        </script>
-
-        <style type="text/css">
-            
-
-
-
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
-
-input#myInput {
-  border: 1px solid transparent;
-  background-color: #fff;
-  padding: 10px;
-  font-size: 16px;
-}
-
-input[type=text]#myInput {
-  background-color: #fff;
-  width: 100%;
-      border-radius: 7px;
-    font-size: 15pt;
-    outline: none;
-}
-
-input[type=submit]#myInput {
-  background-color: DodgerBlue;
-  color: #fff;
-  cursor: pointer;
-}
-
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;color: black;
-}
-
-.autocomplete-items div {
-  padding: 20px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
-}
-
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9; 
-}
-
-.autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
-}
-#searchqueryinput2{
-    display: none;
-}
-#searchqueryinput2.show{
-    display: inline-block;
-}
-
-
-
-
-
-        </style>
-        <div id="highlights">
-          
-                
-
-          <form style="width: 70%;
-   " autocomplete="off" action="/action_page.php" id="searchqueryinput2">
-  <div class="autocomplete" style="width:100%;">
-    <input id="myInput" type="text" name="myCountry" placeholder="Enter Search Term">
-  </div>
-  <!-- <input type="submit"> -->
-</form>
-
-
-
-            <button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
-
-            <div id="whatshappening" style="
- 
-">
-<center>
-                <h2 >Highlights</h2>
-                <ul>
-                    <li>Lack of governance:DWS</li>
-                    <li>CAPE WATER AND DAMS REPORT </li>
-                </ul></center>
-            </div>
-        </div>
-        <script src="js/autocomplete.js"></script>
-        <script type="text/javascript">
-            autocomplete(document.getElementById("myInput"));
-        </script>
-        <script type="text/javascript">
-        var searchhappening = 0;
-       var lastC="";
-        var promptshow=0;
-        var scopecount=0;
-var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-
-         function searchprompt(ev) {
-            var first=0;
-             var f=$('#searchqueryinput').val();
-                         
-            
-            if(f.length>4){
-             var lastchar=f.charAt(f.length-1);
-             lastC=lastchar;
-                autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
-             var secondlastchar=f.charAt(f.length-2);
-             var thirdlastchar=f.charAt(f.length-3);
-             var fourthlastchar=f.charAt(f.length-4);
-             var fifthlastchar=f.charAt(f.length-5);
-             if(ev.keyCode==190&&secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){scopecount=scopecount+1;console.log(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar+"scope : "+scopecount);}
-            }
-
-              
-             if(promptshow==0)  { $('#searchprompts').velocity("fadeIn", { duration: 700 });promptshow=1;}
-             // body...
-         }
-         function detectscope(argument) {
-             var k=argument.keyCode;
-              var f=$('#searchqueryinput').val();
-              console.log(k);
-            if(f.length>1) {lastC=f.charAt(f.length-1);console.log(lastC);}
-            if(f.length>3){
-                       autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
-            }
-             if(lastC=='.'&&k==8){
-                scopecount=scopecount-1;console.log("scope"+scopecount+"\n last:"+lastC);
-             }
-             if(k==40){
-               ondown();
-             }
-         }
-        function search() {
-
-            if (searchhappening == 0) {
-                $('#searchbutton').addClass('activated');
-
-                $('#searchqueryinput2').addClass("show");
-                $('#whatshappening').velocity("fadeOut", { duration: 200 });
-                $('#main-feed').velocity("fadeOut", { duration: 200 });
-                //$('#search-results').velocity("fadeIn", { duration: 500 });
-                
-
-                searchhappening = 1;
-
-            } else {
-
-                     $('#searchprompts').velocity("fadeOut", { duration: 50 });
-                $('#searchbutton').removeClass('activated');
-                $('#whatshappening').velocity("fadeIn", { duration: 400 });
-                $('#searchqueryinput2').removeClass("show");
-                $('#main-feed').velocity("fadeIn", { duration: 1200 });
-                //$('#search-results').velocity("fadeOut", { duration: 300 });
-                
-            $('#search-results').velocity("fadeOut", { duration: 100 });
-
-                searchhappening = 0;promptshow=0;
-            }
-
-            // body...
-        }
-      
-        </script>
-        <style type="text/css">
-            .search_res {
-    padding-right: 20px;
-
-}
-            .search_res li {
-    margin: 9%;
-    margin-top: 30px;
-   
-    text-align: left;
-}
- .search_res li a.more{
-    float: right;cursor: pointer;
-
- }
- #search-results a.add:before{
-content: "+";
- }
- #search-results a.add.added:before{
-  content: "✓";
- }
- #search-results a.add,#search-results a.more {
-   cursor: pointer;
-    margin-left: 7px;
-    opacity: 0.9;
-    padding: 5px;
-    padding-top: 2px;
-    border-radius: 50%;
-    border: 1px solid;
-    font-size: medium;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 6px;
-    float: right;
-    font-weight: 700;
-}
-#search-results a.add.added{
-color: white;background: navy;
-}
-#search-results a.share{
-    padding: 3px;border-radius:50%;border:1px solid;font-size: medium;padding-left: 7px;padding-right: 7px;margin: 6px;float: right;cursor: pointer;
-}
- .search_res li a.more:before{
-    content: "...";
-
- }
-  .search_res li.nonexpandable a.more{
-display: none;
-  }
-
-        </style>
-          <div id="search-results" class="panel" style="display: none;opacity: 0">
-              <h3>Search Results</h3>
-              <div style="margin:4%;margin-top: 150px">
-                  <ol class="search_res" style="list-style: none;" id="search_res">
-                      <li >@SearchRes <a class="more"></a></li>
-                      <li>#SearchRes  <a class="more"></a></li>
-                      <li class="nonexpandable">Search Res Li <a class="more"></a></li>
-
-
-                  </ol>
-              </div>
-          </div>
-        <div id="main-feed" class="panel">
-            <div class="update">
-                <h6 class="detail-bar">
-
-                <div style="
-    /* float: left; */
-    text-align: left;
-"><img src="img/jd.jpg" class="dp"><i style="
-    /* margin-top: -60px; */
-    /* margin-left: 90px; */
-">@John_Doe</i></div>
-6/7/18 7:09<br>
-</h6>
-                <h3></h3>
-                <section class="maincontent"><b><big>Lack of governance DWS : </big></b>Total lack of governance in DWS has led to the inability of SA to nationally instill water resilience as mandated. Extraordinary pressure as a consequence is being placed on munis where bulk water assurance of supply is threatened. This post is not to solicit petty party political commentary but to help set the scene for a new approach to reverse the economic melt down taking place due to insufficient water in SA at the right time, place, quality and price. Without fixing DWS, nothing downstream we do will have the desired effect for SA's water assurity of supply.
-</section>
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 1.3);
-">
-                   <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 1.3);
-"> --></section>
-                <section class="action-bar">
-                     
-
-
-
-
-
-
-                  <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                     <section>
-
-
-
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-validate"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button  class="replybutton"style="
-    /* float: right; */
-   
-    "><span class="icon-reply2"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-forward2"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    " class="morebutton"><span class="icon-more"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-
-
-
-
-
-
-<div class="update">
-                <h6 class="detail-bar">
-6/7/18 7:09<br>
-</h6>
-                <h3></h3>
-                <section style="text-align: left;font-size: large;"><b><big>CAPE WATER AND DAMS REPORT :-</big></b>My latest CAPE WATER AND DAMS REPORT (9Apr). Proposed budget reveals the expected full cost of making the City water-resilient. Large sacrifices will be called for. See how it might affect you and what may be achieved over coming years. Have your say. Read more at www.bit.ly/ShMeD097. Please share widely.
-</section>
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"></section>
-                <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="update">
-                <h6 class="detail-bar">
-6/7/18 7:09<br>
-</h6>
-                <h3>CAPE WATER AND DAMS REPORT</h3>
-                <section style="text-align: left;font-size: large;">My latest CAPE WATER AND DAMS REPORT (9Apr). Proposed budget reveals the expected full cost of making the City water-resilient. Large sacrifices will be called for. See how it might affect you and what may be achieved over coming years. Have your say. Read more at www.bit.ly/ShMeD097. Please share widely.
-</section>
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"></section>
-                <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-
-
-
-
-
-
-
-
-
-
-<div class="update">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> South Africa
-</h6>
-                <h3>Update</h3>
-                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">A Real Time Development about the Cape Town Crisis</section>
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 1.3);
-">
-                    </section>
-                <section class="action-bar">
-                     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    " class="lovbutton"><span class="icon-more"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-
-
-
-
-
-
-
-
-
- <div class="update obj">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> 
-</h6>
-                <h3>Objective</h3>
-                <section style="text-align: left;font-size: large;;">An Objectives touches on a list of priorties and suggestions. </section>
-<section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);"><ul class="priorities">
-    <li>A great point</li>
-    <li>Another great point</li>
-    <li>Yet Another great point</li>
-  <!--   <li>A great point </li>
-    <li>A great point</li>
-    <li>A great point</li> -->
-</ul></section>
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-">
-                    <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-"> --></section>
-              
-
-
-
-
-
-
-
-  <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="update ques">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> 
-</h6>
-                <h3>Poll Title</h3>
-<!--   <h5 style="    margin: 6px;
-    text-align: left;
-    margin-left: 13px;
-    color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
- -->
-                <section class="poll-q" style="text-align: left;font-size: large;;">Asks a poll question</section>
+               width: 26%;
+               background: transparent;
+               border: 1px solid navy;
+               cursor: pointer;
+               /* padding: 10px; */
+               border-radius: 8px;
+               font-size: larger;
+               background: #2d61bd;
+               color: white;
+               margin: 40px;
+               " onclick="addcontenttofeed()">
+            <script type="text/javascript">
+               function addcontenttofeed(){
+                var title=$('#inp-title').val();
+                var c_ =$('#inp-content').html();
+               var up_str='<div class="update"> <h6 class="detail-bar">  </h6> <h3>'+title+'</h3> <section style="text-align: left;font-size: large; */">'+c_+'</section> <section style=" padding: 19px; /* text-align: left; */ "> </section> <section class="action-bar"> <section> <button style=" /* float: right; */ "><span class="icon-star"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-reply"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-share"></span></button> <br> <span><small></small></span> </section> <section> <button style=" /* float: right; */ "><span class="icon-heart"></span></button> <br> <span><small></small></span> </section> </section> </div>';
+               $(up_str).insertAfter('#feed-title');
                
-
-<section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);" ><ul  class=" poll_options">
-    <li><section style="width:45%"><span style="">Option A</span></section> <span >35%</span></li>
-    <li><section style="width:35%"><span style="">Option B</span></section> <span >20%</span></li>
-   <li ><section style="width:55%"><span style="">Option C</span></section> <span >45%</span></li>
-  <!--   <li>A great point </li>
-    <li>A great point</li>
-    <li>A great point</li> -->
-</ul></section>
-
-
-
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-">
-                    <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-"> --></section>
-              
-
-
-
-
-
-
-
-  <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="update ques">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> 
-</h6>
-                <h3>Question</h3>
-  <h5 style="    margin: 6px;
-    text-align: left;
-    margin-left: 13px;
-    color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
-
-                <section style="text-align: left;font-size: large;;">Asks a legitimate Query about the cause </section>
                
-
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-">
-                    <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-"> --></section>
-              
-
-
-
-
-
-
-
-  <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-<div class="update hlink">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> Alaska
-</h6>
-                <h3>Helpful link</h3>
-                <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
-<small><small>Found it helpful because:It talks about <a style="cursor:pointer;text-decoration: underline">something</a> we need </small></small>
-                
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-">
-</section>
-
-
-
-
-
-
-
-  <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-              
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="update">
-                <h6 class="detail-bar">
-6/7/18 7:09<br>
-</h6>
-                <h3>Event</h3>
-
-                   <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg"  style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 1.3);
-">
-                   <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 1.3);
-"> --></section>
-                <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Event Description
-</section>
-
-      <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">When : 12th May 2018 6:30 PM EDT
-</section>
-     <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Where : Hollow Creek,NJ
-</section>
-     <section style="text-align: left;font-size: large;">RSVP : <a style="text-decoration: underline;">bitly/rsvp</a>
-</section>
-             
-                <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <div class="update milestone">
-                <h6 class="detail-bar">
-6/7/18 7:09<br> Alaska
-</h6>
-                <h3>Milestone : A Positive development</h3>
-                <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
-                
-                <section style="
-    padding: 19px;
-    /* text-align: left; */
-"><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
-    margin: 17px;
-    border: 1px solid gainsboro;
-    width: calc(100% / 2.3);
-">
-</section>
-
-
-
-
-
-
-
-  <section class="action-bar">
-                     <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-star"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-reply"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                    <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-share"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                      <section>
-                        <button style="
-    /* float: right; */
-   
-    "><span class="icon-heart"></span></button>
-                        <br>
-                        <span><small>6.9k</small></span>
-                    </section>
-                </section>
-              
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
+               
+               
+               
+               
+               
+               $('#addtofeed').removeClass('close');
+               
+                            $('#add-div').velocity("fadeOut",
+               { 
+                duration: 500,
+                complete: function() { 
+                   $('#add_items').css('display','block');$('#add_items').css('opacity','1');
+               $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
+               
+               
+                }
+               });
+                            open = 0;
+               
+               
+               
+               
+               
+               
+               
+               } 
+            </script>
+         </center>
+      </div>
+      <script type="text/javascript">
+         var add_item = 0;
+                 function addtofeed(a)
+                 {
+                      $('#add_items').velocity("fadeOut", { duration: 400 });
+                      fadeallelements();
+                      switch(a) {
+         case 'u': $('.add_inp.update_inp').velocity('fadeIn');break;
+         // case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
+         //  case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
+         //   case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
+         //   case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
+         //   case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
+                                 }
+                 }
+                 function fadeallelements(){
+                     $('#add_inp').velocity('fadeIn');
+                     $('.add_inp').velocity("fadeOut");
          
-
-
-
-
-
-
-
-        <ul id="add-">
+                 }
+                  function go_back(){
+                     console.log('goback');
+                      $('#add_inp').velocity('fadeOut');
+                     $('.add_inp').velocity("fadeOut");   $('#add_items').velocity("fadeIn", { duration: 600 });
+                  }
+      </script>
+      <!-- End of Add Div -->
+      <button class="barbutton" style="
+         " onclick="location.href='person.html'"><span class="icon-person"></span>
+      <span class="badge-main" style="
+         font-size: small;
+         background: orange;
+         padding: 9px;
+         padding-top: 6px;
+         border-radius: 50%;
+         padding-bottom: 5px;
+         position: absolute;
+         border: 1px solid white;
+         color: white;
+         top: -10px;
+         display: none;
+         ">20</span>
+      </button>
+      <button class="barbutton" style="
+         " id="icon-settings" onclick="location.href='notifications.html'"><span class="icon-notifications"></span>
+      <span class="badge-main" style="
+         font-size: small;
+         background: orange;
+         padding: 9px;
+         padding-top: 6px;
+         border-radius: 50%;
+         padding-bottom: 5px;
+         position: absolute;
+         border: 1px solid white;
+         color: white;
+         top: -10px;
+         display: none;
+         ">20</span>
+      </button>
+      <button class="barbutton" style="
+         margin-left: 200px;
+         display: none;
+         "><span class="icon-refresh"></span>
+      <span class="badge-main" style="
+         font-size: small;
+         background: orange;
+         padding: 9px;
+         padding-top: 6px;
+         border-radius: 50%;
+         padding-bottom: 5px;
+         position: absolute;
+         border: 1px solid white;
+         color: white;
+         top: -10px;
+         display: none;
+         ">20</span>
+      </button>
+      <center>
+         <header>
+            <h1  id="maintitle">#HelpCapeTown</h1>
+            <h4 id="mainsubtitle">Let's come together to help Cape Town achieve water stabilty</h4>
+         </header>
+         <button id="addtofeed" class="floating-button" onclick="addsomethingtofeed()">+</button>
+         <script type="text/javascript">
+            var open = 0;
+            
+            function addsomethingtofeed() {
+                // body...
+                if (open == 0) { $('#addtofeed').addClass('close');
+                    $('#add-div').velocity("fadeIn", { duration: 200 });
+                    open = 1; } else {
+                    $('#addtofeed').removeClass('close');
+            
+                    $('#add-div').velocity("fadeOut",
+            { 
+            duration: 500,
+            complete: function() { 
+            $('#add_items').css('display','block');$('#add_items').css('opacity','1');
+            $('#add_inp').css('display','none');$('#add_inp').css('opacity','0');
+            
+            
+            }
+            });
+                    open = 0;
+                }
+            }
+         </script>
+         <style type="text/css">
+            .autocomplete {
+            /*the container must be positioned relative:*/
+            position: relative;
+            display: inline-block;
+            }
+            input#myInput {
+            border: 1px solid transparent;
+            background-color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            }
+            input[type=text]#myInput {
+            background-color: #fff;
+            width: 100%;
+            border-radius: 7px;
+            font-size: 15pt;
+            outline: none;
+            }
+            input[type=submit]#myInput {
+            background-color: DodgerBlue;
+            color: #fff;
+            cursor: pointer;
+            }
+            .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;color: black;
+            }
+            .autocomplete-items div {
+            padding: 20px;
+            cursor: pointer;
+            background-color: #fff; 
+            border-bottom: 1px solid #d4d4d4; 
+            }
+            .autocomplete-items div:hover {
+            /*when hovering an item:*/
+            background-color: #e9e9e9; 
+            }
+            .autocomplete-active {
+            /*when navigating through the items using the arrow keys:*/
+            background-color: DodgerBlue !important; 
+            color: #ffffff; 
+            }
+            #searchqueryinput2{
+            display: none;
+            }
+            #searchqueryinput2.show{
+            display: inline-block;
+            }
+         </style>
+         <div id="highlights">
+            <form style="width: 70%;
+               " autocomplete="off" action="/action_page.php" id="searchqueryinput2">
+               <div class="autocomplete" style="width:100%;">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Enter Search Term">
+               </div>
+               <!-- <input type="submit"> -->
+            </form>
+            <button id="searchbutton" onclick="search()" style="  "><span class="icon-search"></span></button>
+            <div id="whatshappening" style="
+               ">
+               <center>
+                  <h2 >Highlights</h2>
+                  <ul>
+                     <li>Lack of governance:DWS</li>
+                     <li>CAPE WATER AND DAMS REPORT </li>
+                  </ul>
+               </center>
+            </div>
+         </div>
+         <script src="js/autocomplete.js"></script>
+         <script type="text/javascript">
+            autocomplete(document.getElementById("myInput"));
+         </script>
+         <script type="text/javascript">
+            var searchhappening = 0;
+            var lastC="";
+            var promptshow=0;
+            var scopecount=0;
+            var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+            
+             function searchprompt(ev) {
+                var first=0;
+                 var f=$('#searchqueryinput').val();
+                             
+                
+                if(f.length>4){
+                 var lastchar=f.charAt(f.length-1);
+                 lastC=lastchar;
+                    autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
+                 var secondlastchar=f.charAt(f.length-2);
+                 var thirdlastchar=f.charAt(f.length-3);
+                 var fourthlastchar=f.charAt(f.length-4);
+                 var fifthlastchar=f.charAt(f.length-5);
+                 if(ev.keyCode==190&&secondlastchar!="."&&thirdlastchar!="."&&fourthlastchar!="."&&fifthlastchar!="."){scopecount=scopecount+1;console.log(" 2 : "+secondlastchar+" 3: "+thirdlastchar+" 4: "+fourthlastchar+" 5:"+fifthlastchar+"scope : "+scopecount);}
+                }
+            
+                  
+                 if(promptshow==0)  { $('#searchprompts').velocity("fadeIn", { duration: 700 });promptshow=1;}
+                 // body...
+             }
+             function detectscope(argument) {
+                 var k=argument.keyCode;
+                  var f=$('#searchqueryinput').val();
+                  console.log(k);
+                if(f.length>1) {lastC=f.charAt(f.length-1);console.log(lastC);}
+                if(f.length>3){
+                           autocomplete(countries,$('#loaddots'),$('#reslist-outer'),$('#searchqueryinput'));
+                }
+                 if(lastC=='.'&&k==8){
+                    scopecount=scopecount-1;console.log("scope"+scopecount+"\n last:"+lastC);
+                 }
+                 if(k==40){
+                   ondown();
+                 }
+             }
+            function search() {
+            
+                if (searchhappening == 0) {
+                    $('#searchbutton').addClass('activated');
+            
+                    $('#searchqueryinput2').addClass("show");
+                    $('#whatshappening').velocity("fadeOut", { duration: 200 });
+                    $('#main-feed').velocity("fadeOut", { duration: 200 });
+                    //$('#search-results').velocity("fadeIn", { duration: 500 });
+                    
+            
+                    searchhappening = 1;
+            
+                } else {
+            
+                         $('#searchprompts').velocity("fadeOut", { duration: 50 });
+                    $('#searchbutton').removeClass('activated');
+                    $('#whatshappening').velocity("fadeIn", { duration: 400 });
+                    $('#searchqueryinput2').removeClass("show");
+                    $('#main-feed').velocity("fadeIn", { duration: 1200 });
+                    //$('#search-results').velocity("fadeOut", { duration: 300 });
+                    
+                $('#search-results').velocity("fadeOut", { duration: 100 });
+            
+                    searchhappening = 0;promptshow=0;
+                }
+            
+                // body...
+            }
+            
+         </script>
+         <style type="text/css">
+            .search_res {
+            padding-right: 20px;
+            }
+            .search_res li {
+            margin: 9%;
+            margin-top: 30px;
+            text-align: left;
+            }
+            .search_res li a.more{
+            float: right;cursor: pointer;
+            }
+            #search-results a.add:before{
+            content: "+";
+            }
+            #search-results a.add.added:before{
+            content: "✓";
+            }
+            #search-results a.add,#search-results a.more {
+            cursor: pointer;
+            margin-left: 7px;
+            opacity: 0.9;
+            padding: 5px;
+            padding-top: 2px;
+            border-radius: 50%;
+            border: 1px solid;
+            font-size: medium;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 6px;
+            float: right;
+            font-weight: 700;
+            }
+            #search-results a.add.added{
+            color: white;background: navy;
+            }
+            #search-results a.share{
+            padding: 3px;border-radius:50%;border:1px solid;font-size: medium;padding-left: 7px;padding-right: 7px;margin: 6px;float: right;cursor: pointer;
+            }
+            .search_res li a.more:before{
+            content: "...";
+            }
+            .search_res li.nonexpandable a.more{
+            display: none;
+            }
+         </style>
+         <div id="search-results" class="panel" style="display: none;opacity: 0">
+            <h3>Search Results</h3>
+            <div style="margin:4%;margin-top: 150px">
+               <ol class="search_res" style="list-style: none;" id="search_res">
+                  <li >@SearchRes <a class="more"></a></li>
+                  <li>#SearchRes  <a class="more"></a></li>
+                  <li class="nonexpandable">Search Res Li <a class="more"></a></li>
+               </ol>
+            </div>
+         </div>
+         <div id="main-feed" class="panel">
+         <div class="update">
+            <h6 class="detail-bar">
+               <div style="
+                  /* float: left; */
+                  text-align: left;
+                  "><img src="img/jd.jpg" class="dp"><i style="
+                  /* margin-top: -60px; */
+                  /* margin-left: 90px; */
+                  ">@John_Doe</i></div>
+               6/7/18 7:09<br>
+            </h6>
+            <h3></h3>
+            <section class="maincontent"><b><big>Lack of governance DWS : </big></b>Total lack of governance in DWS has led to the inability of SA to nationally instill water resilience as mandated. Extraordinary pressure as a consequence is being placed on munis where bulk water assurance of supply is threatened. This post is not to solicit petty party political commentary but to help set the scene for a new approach to reverse the economic melt down taking place due to insufficient water in SA at the right time, place, quality and price. Without fixing DWS, nothing downstream we do will have the desired effect for SA's water assurity of supply.</section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               ">
+               <img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 1.3);
+                  ">
+               <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 1.3);
+                  "> -->
+            </section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-validate"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button  class="replybutton"style="
+                     /* float: right; */
+                     "><span class="icon-reply2"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-forward2"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     " class="morebutton"><span class="icon-more"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br>
+            </h6>
+            <h3></h3>
+            <section style="text-align: left;font-size: large;"><b><big>CAPE WATER AND DAMS REPORT :-</big></b>My latest CAPE WATER AND DAMS REPORT (9Apr). Proposed budget reveals the expected full cost of making the City water-resilient. Large sacrifices will be called for. See how it might affect you and what may be achieved over coming years. Have your say. Read more at www.bit.ly/ShMeD097. Please share widely.</section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               "></section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br>
+            </h6>
+            <h3>CAPE WATER AND DAMS REPORT</h3>
+            <section style="text-align: left;font-size: large;">My latest CAPE WATER AND DAMS REPORT (9Apr). Proposed budget reveals the expected full cost of making the City water-resilient. Large sacrifices will be called for. See how it might affect you and what may be achieved over coming years. Have your say. Read more at www.bit.ly/ShMeD097. Please share widely.</section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               "></section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> South Africa
+            </h6>
+            <h3>Update</h3>
+            <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">A Real Time Development about the Cape Town Crisis</section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               "><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+               margin: 17px;
+               border: 1px solid gainsboro;
+               width: calc(100% / 1.3);
+               ">
+            </section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     " class="lovbutton"><span class="icon-more"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update obj">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> 
+            </h6>
+            <h3>Objective</h3>
+            <section style="text-align: left;font-size: large;;">An Objectives touches on a list of priorties and suggestions. </section>
+            <section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);">
+               <ul class="priorities">
+                  <li>A great point</li>
+                  <li>Another great point</li>
+                  <li>Yet Another great point</li>
+                  <!--   <li>A great point </li>
+                     <li>A great point</li>
+                     <li>A great point</li> -->
+               </ul>
+            </section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               ">
+               <!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  ">
+                                  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  "> -->
+            </section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update ques">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> 
+            </h6>
+            <h3>Poll Title</h3>
+            <!--   <h5 style="    margin: 6px;
+               text-align: left;
+               margin-left: 13px;
+               color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+               -->
+            <section class="poll-q" style="text-align: left;font-size: large;;">Asks a poll question</section>
+            <section style="text-align: left;font-size: large;border-top: 1px double rgb(196, 207, 224);" >
+               <ul  class=" poll_options">
+                  <li>
+                     <section style="width:45%"><span style="">Option A</span></section>
+                     <span >35%</span>
+                  </li>
+                  <li>
+                     <section style="width:35%"><span style="">Option B</span></section>
+                     <span >20%</span>
+                  </li>
+                  <li >
+                     <section style="width:55%"><span style="">Option C</span></section>
+                     <span >45%</span>
+                  </li>
+                  <!--   <li>A great point </li>
+                     <li>A great point</li>
+                     <li>A great point</li> -->
+               </ul>
+            </section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               ">
+               <!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  ">
+                                  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  "> -->
+            </section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update ques">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> 
+            </h6>
+            <h3>Question</h3>
+            <h5 style="    margin: 6px;
+               text-align: left;
+               margin-left: 13px;
+               color: #25bfb0;">Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+            <section style="text-align: left;font-size: large;;">Asks a legitimate Query about the cause </section>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               ">
+               <!-- <img src="http://www.hcn-nyc.org/wp-content/uploads/2015/05/VOTE_Yes_Meme5-300x300.jpg" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  ">
+                                  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 2.3);
+                  "> -->
+            </section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update hlink">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> Alaska
+            </h6>
+            <h3>Helpful link</h3>
+            <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+            <small><small>Found it helpful because:It talks about <a style="cursor:pointer;text-decoration: underline">something</a> we need </small></small>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               "><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+               margin: 17px;
+               border: 1px solid gainsboro;
+               width: calc(100% / 2.3);
+               "></section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br>
+            </h6>
+            <h3>Event</h3>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               ">
+               <img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg"  style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 1.3);
+                  ">
+               <!--  <img src="http://www.metrohealthcare.net/wp-content/uploads/2015/03/hcfany-logo.png" https:="" pbs.twimg.com="" media="" style="
+                  margin: 17px;
+                  border: 1px solid gainsboro;
+                  width: calc(100% / 1.3);
+                  "> -->
+            </section>
+            <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Event Description</section>
+            <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">When : 12th May 2018 6:30 PM EDT</section>
+            <section style="text-align: left;font-size: large;border-bottom: 1px solid rgba(0, 45, 128, 0.12);">Where : Hollow Creek,NJ</section>
+            <section style="text-align: left;font-size: large;">RSVP : <a style="text-decoration: underline;">bitly/rsvp</a></section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <div class="update milestone">
+            <h6 class="detail-bar">
+               6/7/18 7:09<br> Alaska
+            </h6>
+            <h3>Milestone : A Positive development</h3>
+            <h5>Ref To : <a style="cursor: pointer;text-decoration: underline;">Something that was posted earlier</a></h5>
+            <section style="
+               padding: 19px;
+               /* text-align: left; */
+               "><img src="https://showme.co.za/paarl/files/2018/05/Dam-Korentepoort-rev1-626x417.jpg" https:="" pbs.twimg.com="" media="" style="
+               margin: 17px;
+               border: 1px solid gainsboro;
+               width: calc(100% / 2.3);
+               "></section>
+            <section class="action-bar">
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-star"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-reply"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-share"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+               <section>
+                  <button style="
+                     /* float: right; */
+                     "><span class="icon-heart"></span></button>
+                  <br>
+                  <span><small>6.9k</small></span>
+               </section>
+            </section>
+         </div>
+         <ul id="add-">
             <li>Update</li>
             <li>Objective</li>
-        </ul>
-    </center>
-
-
-
-
-
-
-
-
-<!-- SHARE DIV -->
-
-
-<div style="position: fixed;width: 100%;background: rgb(84, 23, 23);background: rgba(255, 255, 255, 0.95);ight: 100%;z-index: 500;top: 0px;padding: 20px;text-align: center;display:none;bottom: 0;" id="more-div-share" class="">
-        <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Share</h2>
-        <center>
-       <ul id="more-items">
-
-            
-            
-            
-            <li style="
-        color: white;
-    border: 1px solid #24aafd;
-    background: #24aafd;
-" onclick="window.location.href='https://twitter.com/intent/tweet?text=Learn%20more%20about%20Searchterm%20on%20HelpCapeTown.org&source=webclient'">Share on Twitter</li>
-            <li style="
-      color: white;
-    border: 1px solid #4267b2;
-    background: #4267b2
-">Share on Facebook</li>
-        </ul>
-        </center>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- /Share div done -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer id="footer" style="min-height: 200px;" class="target">
-        <span style="margin-top: 20px;">
-© Anuradha Naik. All rights reserved.</span>
-    </footer>
-</body>
-
+         </ul>
+      </center>
+      <!-- SHARE DIV -->
+      <div style="position: fixed;width: 100%;background: rgb(84, 23, 23);background: rgba(255, 255, 255, 0.95);ight: 100%;z-index: 500;top: 0px;padding: 20px;text-align: center;display:none;bottom: 0;" id="more-div-share" class="">
+         <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">Share</h2>
+         <center>
+            <ul id="more-items">
+               <li style="
+                  color: white;
+                  border: 1px solid #24aafd;
+                  background: #24aafd;
+                  " onclick="window.location.href='https://twitter.com/intent/tweet?text=Learn%20more%20about%20Searchterm%20on%20HelpCapeTown.org&source=webclient'">Share on Twitter</li>
+               <li style="
+                  color: white;
+                  border: 1px solid #4267b2;
+                  background: #4267b2
+                  ">Share on Facebook</li>
+            </ul>
+         </center>
+      </div>
+      <!-- /Share div done -->
+      <footer id="footer" style="min-height: 200px;" class="target">
+         <span style="margin-top: 20px;">
+         © Anuradha Naik. All rights reserved.</span>
+      </footer>
+   </body>
 </html>
