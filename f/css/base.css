@@ -172,6 +172,33 @@ section.action-bar {
 .floating-button.close {
     transform: rotate(43deg);
 }
+#add-div{
+
+      position: fixed;
+         width: 100%;
+         background: white;
+         height: 100%;
+         z-index: 500;
+         top: 0px;
+         padding: 20px;text-align: center;display: none;
+}
+#add-div h2{
+    /* padding-top: 40px; */text-align: center;;margin-top: 3px;
+}
+#add_inp .floating-button{
+    box-shadow: none;
+               position: absolute;
+               bottom: 88%;
+               left: 35px;
+               color: rgb(89, 135, 216);
+               border: 2px solid;
+               background: transparent;
+               display: inline-block;
+               width: 20px;
+               line-height: 1.5;
+               padding-top: 1px;
+               font-size: xx-large;
+}
 
 #add-div .form input {
     padding: 8px;
@@ -190,7 +217,26 @@ section.action-bar {
 #add-div .form {
     margin-top: 37px;
 }
+.add_inp.event_inp{
+    display: inline-flex;
+    width: 20%;
+}
+#inp-content{
 
+}
+.badge-main{
+     font-size: small;
+         background: orange;
+         padding: 9px;
+         padding-top: 6px;
+         border-radius: 50%;
+         padding-bottom: 5px;
+         position: absolute;
+         border: 1px solid white;
+         color: white;
+         top: -10px;
+         display: none;
+}
 ul#add_items li {
     margin: 9px;
     margin-bottom: 29px;
