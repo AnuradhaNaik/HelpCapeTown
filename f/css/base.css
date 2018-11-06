@@ -435,6 +435,7 @@ ul#respond-items li {
     max-width: 400px;
     min-width: 200px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .maincontent {
@@ -535,7 +536,7 @@ li#response {
 }
 
 li#response >div {
-    outline: none;text-align: left;
+    outline: none;text-align: left;padding: 16px;
 }
 
 @media (min-device-width: 320px) and (max-device-width: 780px) {
