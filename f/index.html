@@ -137,12 +137,12 @@
             <input class="add_inp cta_inp" placeholder="CTA ref">
             <br>   <input class="add_inp event_inp" type="date" name="" style="
                
-               margin-left: 14px;
+               margin-left: 14px;    width: 30%;
                /* margin-right: 9px; */
                ">
             <input class="add_inp event_inp" type="time" name="" style="
                
-               margin-left: 9px;
+               margin-left: 9px;    width: 30%;
                margin-right: 9px;
                ">
             <br>     <input class="add_inp event_inp" type="" name="place" placeholder="place" style="
@@ -213,8 +213,8 @@
                       switch(a) {
          case 'u': $('.add_inp.update_inp').velocity('fadeIn');break;
          // case 'o':$('.add_inp.obj_inp').velocity('fadeIn');break;
-         //  case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
-         //   case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
+          case 'm':$('.add_inp.milestone_inp').velocity('fadeIn');break;
+           case 'e':$('.add_inp.event_inp').velocity('fadeIn');break;
          //   case 'q':$('.add_inp.question_inp').velocity('fadeIn');break;
          //   case 'c':$('.add_inp.cta_inp').velocity('fadeIn');break;
                                  }
