@@ -1,131 +1,180 @@
-function getjson(argument) {
+function getJson(argument) {
   // body...
   var result = '{}';
+console.log('getjson');
   // body...
   return result;
 }
 
-function putjson(jsonargument) {
+function putJson(jsonargument) {
   // body...
+console.log('putjson');
 
   // body...
   return 0;
 }
 
-function fetchhighlights(argument) {
+function fetchHighlights(argument) {
+  console.log('fetchhighlights');
+
+  // //getjson
+}
+function fetchNotificationsLite(argument) {
+  console.log('fetchNotificationsL');
+
+  // //getjson
+}
+function fetchNotifications(argument) {
+  console.log('fetchNotifications');
+
   // //getjson
 }
 
-function resultforautocomple(argument) {
+function resultForAutoComplete(argument) {
+
   var arr = [];
+    console.log('resultforautocomple');
+
   return arr;
   //getjson
 }
 
-function savepost(post) { //putjson
+function savePost(post) {
+      console.log('savepost');
+
+ //putjson
   return 0;
 }
 
-function verifypost(post) {
+function verifyPost(post) {
+        console.log('verifypost');
+
   return 0;
 }
 
-function forwardpost(post) {
+function forwardPost(post) {
+          console.log('forwardpost');
+
   return 0;
 }
 
-function fetchfeed() {
+function fetchFeed() {
+  
+            console.log('fetchfeed');
+
+
   return 0; //getjson
 }
 
-function fetchApost() { //getjson
+function fetchAPost() { //getjson
+              console.log('fetchApost');
+
   return 0;
 }
 
 function post(argument) {
   //getjson
+  console.log('post');
+
   return 0;
 }
 
-function getperson(argument) {
+function getPerson(argument) {
   var result = '{}';
+    console.log('getperson');
+
   //getjson
   return result;
 }
 
-function getfollowers(argument) {
+function getFollowers(argument) {
   var result = '{}';
+      console.log('getfollowers');
+
   //getjson
   return result;
 }
 
-function getfollowing(argument) {
+function getFollowing(argument) {
   var result = '{}';
   //getjson
+        console.log('getfollowing');
+
   return result;
 }
 
 
-function editprofile(argument) {
+function editProfile(argument) {
   //put json
+        console.log('editprofile');
+
   return 0;
 }
 
-function fetchsavedfeed() {
+function fetchSavedFeed() {
+          console.log('fetchsavedfeed');
+
   //getjson
   return 0;
 }
 
-function getmilestone(argument) { //getjson
+function getMilestone(argument) { //getjson
   var result = '{}';
+          console.log('getmilestone');
 
   return result;
 
 }
 
-function getaddto(argument) { //getjson
+function getAddTo(argument) { //getjson
   var result = '{}';
+          console.log('getaddto');
 
   return result;
 }
 
-function getquestion(argument) { //getjson
+function getQuestion(argument) { //getjson
   var result = '{}';
-
+console.log('getquestion');
   return result;
 
 }
 
-function getonemore(argument) { //getjson
+function getOneMore(argument) { //getjson
   var result = '{}';
-
-  return result;
-
-}
-
-function getmorefeed(argument) { //getjson
-  var result = '{}';
+console.log('getonemore');
 
   return result;
 
 }
 
-function getmilestonefeed(argument) { //getjson
+function getMoreFeed(argument) { //getjson
   var result = '{}';
+console.log('getmorefeed');
 
   return result;
 
 }
 
-function getaddtofeed(argument) { //getjson
+function getMilestoneFeed(argument) { //getjson
   var result = '{}';
+console.log('getmilestonefeed');
 
   return result;
 
 }
 
-function getquestionfeed(argument) { //getjson
+function getAddToFeed(argument) { //getjson
   var result = '{}';
+console.log('getaddtofeed');
+
+  return result;
+
+}
+
+function getQuestionFeed(argument) { //getjson
+  var result = '{}';
+console.log('getquestionfeed');
 
   return result;
 
