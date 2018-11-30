@@ -1,87 +1,106 @@
 function getJson(argument) {
   // body...
   var result = '{}';
-console.log('getjson');
+alert('getjson');
   // body...
   return result;
 }
 
 function putJson(jsonargument) {
   // body...
-console.log('putjson');
+alert('putjson');
 
   // body...
   return 0;
 }
 
 function fetchHighlights(argument) {
-  console.log('fetchhighlights');
+  alert('fetchhighlights');
 
   // //getjson
 }
 function fetchNotificationsLite(argument) {
-  console.log('fetchNotificationsL');
+  alert('fetchNotificationsL');
 
   // //getjson
 }
 function fetchNotifications(argument) {
-  console.log('fetchNotifications');
+  alert('fetchNotifications');
 
   // //getjson
 }
+function logout(argument) {
+  alert('Logout');
 
+  // //getjson
+}
+function saveedit(argument) {
+  alert('Save edit');
+
+  // //getjson
+}
+function morefollowers(argument) {
+  alert('More Followers');
+
+  // //getjson
+}
+function morefollowing(argument) {
+  alert('More Following');
+
+  // //getjson
+}
 function resultForAutoComplete(argument) {
 
   var arr = [];
-    console.log('resultforautocomple');
+    alert('resultforautocomple');
 
   return arr;
   //getjson
 }
 
 function savePost(post) {
-      console.log('savepost');
+      alert('savepost');
 
  //putjson
   return 0;
 }
 
 function verifyPost(post) {
-        console.log('verifypost');
+        alert('verifypost');
 
   return 0;
 }
 
 function forwardPost(post) {
-          console.log('forwardpost');
+          alert('forwardpost');
 
   return 0;
 }
 
 function fetchFeed() {
   
-            console.log('fetchfeed');
+            alert('fetchfeed');
 
 
   return 0; //getjson
 }
 
 function fetchAPost() { //getjson
-              console.log('fetchApost');
+              alert('fetchApost');
 
   return 0;
 }
 
 function post(argument) {
   //getjson
-  console.log('post');
+  alert('post');
 
   return 0;
 }
 
 function getPerson(argument) {
   var result = '{}';
-    console.log('getperson');
+    alert('getperson');
 
   //getjson
   return result;
@@ -89,7 +108,7 @@ function getPerson(argument) {
 
 function getFollowers(argument) {
   var result = '{}';
-      console.log('getfollowers');
+      alert('getfollowers');
 
   //getjson
   return result;
@@ -98,7 +117,7 @@ function getFollowers(argument) {
 function getFollowing(argument) {
   var result = '{}';
   //getjson
-        console.log('getfollowing');
+        alert('getfollowing');
 
   return result;
 }
@@ -106,13 +125,13 @@ function getFollowing(argument) {
 
 function editProfile(argument) {
   //put json
-        console.log('editprofile');
+        alert('editprofile');
 
   return 0;
 }
 
 function fetchSavedFeed() {
-          console.log('fetchsavedfeed');
+          alert('fetchsavedfeed');
 
   //getjson
   return 0;
@@ -120,7 +139,7 @@ function fetchSavedFeed() {
 
 function getMilestone(argument) { //getjson
   var result = '{}';
-          console.log('getmilestone');
+          alert('getmilestone');
 
   return result;
 
@@ -128,21 +147,21 @@ function getMilestone(argument) { //getjson
 
 function getAddTo(argument) { //getjson
   var result = '{}';
-          console.log('getaddto');
+          alert('getaddto');
 
   return result;
 }
 
 function getQuestion(argument) { //getjson
   var result = '{}';
-console.log('getquestion');
+alert('getquestion');
   return result;
 
 }
 
 function getOneMore(argument) { //getjson
   var result = '{}';
-console.log('getonemore');
+alert('getonemore');
 
   return result;
 
@@ -150,7 +169,7 @@ console.log('getonemore');
 
 function getMoreFeed(argument) { //getjson
   var result = '{}';
-console.log('getmorefeed');
+alert('getmorefeed');
 
   return result;
 
@@ -158,7 +177,7 @@ console.log('getmorefeed');
 
 function getMilestoneFeed(argument) { //getjson
   var result = '{}';
-console.log('getmilestonefeed');
+alert('getmilestonefeed');
 
   return result;
 
@@ -166,7 +185,7 @@ console.log('getmilestonefeed');
 
 function getAddToFeed(argument) { //getjson
   var result = '{}';
-console.log('getaddtofeed');
+alert('getaddtofeed');
 
   return result;
 
@@ -174,7 +193,7 @@ console.log('getaddtofeed');
 
 function getQuestionFeed(argument) { //getjson
   var result = '{}';
-console.log('getquestionfeed');
+alert('getquestionfeed');
 
   return result;
 

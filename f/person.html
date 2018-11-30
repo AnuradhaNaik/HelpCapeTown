@@ -16,6 +16,9 @@
       <script src="js/jquery.js"></script>
       <script src="js/velocity.js"></script>
       <script src="js/common.js"></script>
+      <script type="text/javascript">
+          getFollowers(); getFollowing();
+      </script>
  <div style="
          position: fixed;
          width: 100%;
@@ -88,7 +91,7 @@
             <input><br><input>
          </form>
       </div>
-      <a style="float: right;margin-top: 8px;margin-right:14px;cursor: pointer;text-decoration: underline;position: absolute;right: 9px;top: 0px;">Logout</a>
+      <a style="float: right;margin-top: 8px;margin-right:14px;cursor: pointer;text-decoration: underline;position: absolute;right: 9px;top: 0px;" onclick="logout()">Logout</a>
       <button  onclick="location.href='index.html'" class="barbutton"><span class="icon-home"></span></button>
       <button class="barbutton frozen"  id="icon-settings"><span class="icon-settings"></span></button>
       <center>
@@ -172,7 +175,7 @@
                   float: none;
                   margin-left: 68px;
                   cursor: pointer;
-                  "></div>
+                  " onclick="saveedit()"></div>
             </form>
             <style type="text/css">
                .follow_ a {
@@ -220,7 +223,7 @@
                      <img src="img/rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
                      @Rania
                   </li>
-                  <button style="
+                  <button onclick="morefollowing()" style="
                      padding-right: 28px;
                      padding-left: 28px;
                      padding-top: 15px;
@@ -262,7 +265,7 @@
                      cursor: pointer;
                      font-size: large;
                      border-radius: 4px;
-                     ">More</button>
+                     " onclick="morefollowers()">More</button>
                </ul>
             </div>
             <div style="
