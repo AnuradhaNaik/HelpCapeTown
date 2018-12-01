@@ -90,7 +90,21 @@ function fetchAPost() { //getjson
 
   return 0;
 }
+function AddLike() { //getjson
+              alert('Add Like');
 
+  return 0;
+}
+function Validate() { //getjson
+              alert('Validate');
+
+  return 0;
+}
+function ForwardPost() { //getjson
+              alert('fetchApost');
+
+  return 0;
+}
 function post(argument) {
   //getjson
   alert('post');
@@ -122,6 +136,20 @@ function getFollowing(argument) {
   return result;
 }
 
+function getFollowing(argument) {
+  var result = '{}';
+  //getjson
+        alert('getfollowing');
+
+  return result;
+}
+function getSavedPosts(argument) {
+  var result = '{}';
+  //getjson
+        alert('get saved posts');
+
+  return result;
+}
 
 function editProfile(argument) {
   //put json
