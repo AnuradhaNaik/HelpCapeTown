@@ -105,6 +105,21 @@ function ForwardPost() { //getjson
 
   return 0;
 }
+function Reference() { //getjson
+              alert('Reference');
+
+  return 0;
+}
+function Pin() { //getjson
+              alert('Pin');
+
+  return 0;
+}
+function Report() { //getjson
+              alert('Report Pin');
+
+  return 0;
+}
 function post(argument) {
   //getjson
   alert('post');

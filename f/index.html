@@ -84,15 +84,15 @@
          <h2 style="/* padding-top: 40px; */text-align: center;;margin-top: 3px;">More</h2>
          <center>
             <ul id="more-items">
-               <li>Reference</li>
-               <li>Pin</li>
+               <li onclick="Reference()">Reference</li>
+               <li onclick="Pin()">Pin</li>
                <li style="color: #ef0a0a;
-                  border: 1px solid;">Report</li>
+                  border: 1px solid;" onclick="Report()">Report</li>
                <li style="
                   color: white;
                   border: 1px solid #24aafd;
                   background: #24aafd;
-                  ">Share on Twitter</li>
+                  " onclick="window.location='https://twitter.com/intent/tweet?text=Learn%20more%20about%20Searchterm%20on%20HelpCapeTown.org&source=webclient'">Share on Twitter</li>
                <li style="
                   color: white;
                   border: 1px solid #4267b2;
@@ -120,7 +120,7 @@
             <ul id="add_items">
                <li onclick="addtofeed('u')">Update</li>
                <!--  <li onclick="addtofeed()">Helpful Link</li> -->
-               <li onclick="addtofeed('o')">Objective</li>
+               <!-- <li onclick="addtofeed('o')">Objective</li> -->
                <li onclick="addtofeed('m')">Milestone</li>
                <li onclick="addtofeed('e')">Event</li>
                <!-- <li onclick="addtofeed('q')">Question  --><!-- poll included in this --></li>
