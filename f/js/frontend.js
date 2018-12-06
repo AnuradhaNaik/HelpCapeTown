@@ -212,7 +212,7 @@ alert('getonemore');
 
 function getMoreFeed(argument) { //getjson
   var result = '{}';
-alert('getmorefeed');
+alert('get '+argument);
 
   return result;
 
