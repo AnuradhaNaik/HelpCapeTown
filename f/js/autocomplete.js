@@ -1,11 +1,16 @@
 var scopecount = 0;
 var inp_val = "";
 var v = "";
-
+var value="Value";
 function compilesearchresults(term) {
     return 0;
 }
-
+function setValue(argument) {
+   value=argument;
+}
+function getValue() {
+    return value;
+}
 function autocomplete(inp) {
     var arr = countries;
     /*the autocomplete function takes two arguments,
@@ -23,6 +28,7 @@ function autocomplete(inp) {
 
         if (scopecount == 0) {
             val = this.value;
+         
         } else if (this.value.split('.').length >= 2) {
 
 
@@ -32,7 +38,7 @@ function autocomplete(inp) {
             val = already.pop();
             // already=already.splice(-1,1);
 
-
+           
             //var str = this.value; 
             var res = already.join(".");
             inp_val = res;
@@ -194,18 +200,17 @@ function setArr(argument, V) {
 }
 
 function updatelist(argument) {
-
     $('#search_res').html('');
     $('#search-results').velocity("fadeOut", {
         duration: 100
     });
 
     if (argument == 0 && $(v).val().charAt(0) == '@') {
-        $('#search_res').append('<li ><span class="search_res_text">@SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
+        $('#search_res').append('<li ><span class="search_res_text">'+getValue()+'</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
 
 
     } else if (argument == 0 && $(v).val().charAt(0) == '#') {
-        $('#search_res').append('<li  class="nonexpandable" ><span class="search_res_text">#SearchRes</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
+        $('#search_res').append('<li  class="nonexpandable" ><span class="search_res_text">'+getValue()+'</span><a  onclick="moresearchresult(this)" class="more"></a><a onclick="sharesearchresult(this)" class="share" ><small><span class="icon-share"  onclick="sharesearchresult(this)"></span></small></a> <a onclick="addsearchresult(this)" class="add"></a></li>');
 
 
     } else if (argument == 0) {
