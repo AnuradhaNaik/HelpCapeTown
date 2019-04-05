@@ -1,6 +1,9 @@
 
 var scope=0;
 
+// function listen(inp) {
+// 	//administer inp
+// }
 
 function autocomplete(searchterm)
 {
@@ -27,6 +30,9 @@ function updateSearchResults(arg,inp)
 
 
  // });
+}
+function updateSearchTerm(argument) {
+	// body...
 }
 
 function updateScope(argument) {
