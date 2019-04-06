@@ -16,6 +16,12 @@
     margin-bottom: 50px;
     margin-top: 49px;
         }
+        .person-name{
+         cursor: pointer;text-decoration: underline;
+        }
+        .person-name.following{
+         color: #8BC34A;
+        }
       </style>
    </head>
    <body>
@@ -222,13 +228,13 @@
                <ul class="sub" id="following-list" >
                   <li>
                      <img src="img/rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
-                     <span style="
-                        cursor: pointer;
+                     <span class="person-name following" 
                         "> @Rania</span>
                   </li>
                   <li>
                      <img src="img/rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
-                     @Rania
+                    <span class="person-name following" 
+                        "> @Rania</span>
                   </li>
                   <button onclick="morefollowing()" style="
                      padding-right: 28px;
@@ -252,13 +258,14 @@
                <ul class="sub" id="followedby-list">
                   <li>
                      <img src="img/rb.jpg" style="max-width: 140px;border-radius: 50%;display: block;min-height: 132px;cursor: pointer;">
-                     <span style="
-                        cursor: pointer;
+                     <span  class="person-name following"style="
+                        
                         "> @Rania</span>
                   </li>
                   <li>
                      <img src="img/rb.jpg" style="width: 140px;border-radius: 50%;display: block;height: 132px;">
-                     @Rania
+                     <span class="person-name" 
+                        "> @Rania</span>
                   </li>
                   <button style="
                      padding-right: 28px;
